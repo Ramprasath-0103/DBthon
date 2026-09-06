@@ -85,7 +85,7 @@ function pgCode(err: unknown): string | undefined {
 function mapError(err: unknown): number {
   switch (pgCode(err)) {
     case "42501": return 403; // insufficient_privilege — the write-gate trigger fired
-    case "23505": return 409; // one review per place per person
+    case "23505": return 409; // one review per place per person per time bucket
     case "23503": return 404; // location does not exist
     default: return 500;
   }
@@ -96,7 +96,11 @@ function errorBody(err: unknown) {
     case "42501":
       return { error: "read_only_account", message: "Only accounts registered as female can post a review." };
     case "23505":
-      return { error: "already_reviewed", message: "You have already reviewed this place." };
+      return {
+        error: "already_reviewed",
+        message:
+          "You have already rated this place for that time of day. Pick a different part of the day.",
+      };
     case "23503":
       return { error: "unknown_location", message: "That place does not exist." };
     default:

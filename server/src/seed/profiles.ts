@@ -134,3 +134,34 @@ export const CATEGORY_CAPS: Record<CategoryKey, number> = {
   park: 7,
   hostel: 5,
 };
+
+/**
+ * A handful of Vellore places are mapped in OSM only in Tamil script, with no
+ * name:en or int_name tag to read a translation from. The map is presented in
+ * English, so those are transliterated here rather than shown in a script most
+ * of the audience cannot read.
+ *
+ * Keyed by the exact OSM `name` value. If a refetch introduces a new Tamil-only
+ * name, the seed logs a warning naming it rather than silently shipping it.
+ */
+export const NAME_OVERRIDES: Record<string, string> = {
+  "உழவர் சந்தை - வேலூர்": "Uzhavar Sandhai Farmers' Market",
+  "அறிஞர் அண்ணா கிளை நூலகம்": "Arignar Anna Branch Library",
+};
+
+/**
+ * Prefer OSM's own English tags, then our overrides.
+ *
+ * Returns null if the name is still not in Latin script. Such a location is DROPPED
+ * from the seed rather than shown in a script the audience cannot read — we would
+ * rather have 74 places than one unreadable pin.
+ */
+export function englishName(tags: Record<string, string>): string | null {
+  const raw = tags.name!.trim();
+  const tagged = tags["name:en"] ?? tags["int_name"];
+  if (tagged) return tagged.trim();
+  const override = NAME_OVERRIDES[raw];
+  if (override) return override;
+  const nonLatin = /[^\u0000-\u024F\u2000-\u206F]/.test(raw);
+  return nonLatin ? null : raw;
+}

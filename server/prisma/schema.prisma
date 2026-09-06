@@ -93,9 +93,13 @@ model Review {
   location Location @relation(fields: [locationId], references: [id], onDelete: Cascade)
   ratings  ReviewFactorRating[]
 
-  // One review per place per person. NULLs do not collide, so anonymised
-  // reviews are unaffected.
-  @@unique([userId, locationId])
+  // One review per place per person PER TIME BUCKET. The same woman can rate a
+  // bus stop separately for morning, afternoon, evening and night — which is the
+  // whole point of the product. time_bucket is written by the BEFORE INSERT
+  // trigger, and unique constraints are checked after BEFORE triggers run, so the
+  // constraint applies to the derived value, not to whatever the client sent.
+  // NULLs do not collide, so anonymised reviews are unaffected.
+  @@unique([userId, locationId, timeBucket])
   @@index([locationId, timeBucket])
   @@map("reviews")
 }

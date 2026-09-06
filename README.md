@@ -56,8 +56,12 @@ cd server && npm run seed:fetch    # refetch from Overpass (only if you want fre
 elements) and is **committed**, so seeding never needs the network.
 
 The seed is deterministic — the same RNG seed always produces identical data, which is why
-the numbers below are reviewable. 75 locations, 50 users (41 female, 9 male), 1085 reviews,
-6510 factor ratings.
+the numbers below are reviewable. 75 locations, 50 users (41 female, 9 male; 40 of them
+seeded reviewers), 1130 reviews, 6780 factor ratings.
+
+Reviewers are drawn per time bucket, so some women have rated the same place at several
+times of day — 136 person/place pairs cover two buckets, 13 cover three, and one covers
+all four.
 
 Reviews are not uniform noise. Each category has a hidden "true profile" in
 `server/src/seed/profiles.ts` with a per-time-bucket modifier, and ratings are sampled
@@ -106,7 +110,7 @@ All seeded users share the password `password123`.
 cd server && npm test
 ```
 
-17 tests. The ones worth knowing about:
+19 tests. The ones worth knowing about:
 
 - `write-gate.test.ts` opens a raw `pg` connection, bypasses the API entirely, and asserts
   Postgres refuses a review from a male account — plus all 8 time-bucket boundaries, and
@@ -115,6 +119,11 @@ cd server && npm test
   mentions gender. Mutation-tested: injecting a leak makes it fail.
 - `erasure.test.ts` asserts deleting an account keeps the review, its 6 ratings, and the
   sample size intact.
+- `write-gate.test.ts` also asserts one account can rate a single place in all four buckets,
+  and that a fifth review repeating a bucket is refused by both the API and Postgres.
+
+Test files run sequentially (`vitest.config.ts`): they share one database, and running them
+in parallel let one file's inserts change another's sample counts mid-assertion.
 
 ## Docs
 
@@ -133,4 +142,11 @@ cd server && npm test
   anywhere; posting a review moves the score on the next read.
 - Gender is **self-declared at registration**. The enforcement layer is real (middleware
   plus a Postgres trigger); the identity check is not. See `docs/JUDGE_QA.md`.
-- One review per person per place. A duplicate returns a clean 409, not a database error.
+- **One review per person per place, per time bucket.** The same woman can rate a bus stop
+  separately for morning, afternoon, evening and night — that is the point of the product.
+  A repeat within the same bucket returns a clean 409, not a database error.
+- Place names are shown in English. OSM's `name:en` / `int_name` tags are used when present,
+  then an override table in `src/seed/profiles.ts`; anything still not in Latin script is
+  dropped from the seed rather than shown in a script the audience cannot read.
+- The two `@safeway.test` demo accounts are excluded from seeded reviews, so all four
+  buckets on every place are free during a live demo.

@@ -84,6 +84,26 @@ Layer 2 exists because an application bug must not become a data-integrity breac
 `tests/write-gate.test.ts` opens a raw `pg` connection, bypasses the API completely, and
 asserts Postgres refuses the insert.
 
+## One review per person per place, per bucket
+
+`UNIQUE(user_id, location_id, time_bucket)`. A woman can rate the same bus stop for morning,
+afternoon, evening and night — four separate reviews — because a place genuinely is a
+different place at those hours.
+
+The subtlety: `time_bucket` is written by the `BEFORE INSERT` trigger, not by the client.
+Unique constraints are checked *after* `BEFORE` triggers run, so the constraint applies to
+the derived value. A client cannot dodge it by sending a different bucket than its
+`visited_at` implies.
+
+`user_id` is nullable, and NULLs do not collide in a unique index, so anonymised reviews are
+unaffected by this constraint.
+
+## Place names
+
+The map is presented in English. Names resolve as: OSM `name:en` → OSM `int_name` →
+`NAME_OVERRIDES` in `src/seed/profiles.ts` → drop. Anything still not in Latin script after
+that is excluded from the seed rather than rendered in a script the audience cannot read.
+
 ## Erasure
 
 `DELETE /api/me` nulls `reviews.user_id` and then deletes the user. Reviews are **never**

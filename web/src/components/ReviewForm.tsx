@@ -61,7 +61,9 @@ export function ReviewForm({ locationId, onDone, onCancel }: Props) {
     <form onSubmit={submit} className="border-t border-slate-800 p-5">
       <h3 className="text-sm font-semibold text-slate-200">Rate this place</h3>
       <p className="mt-0.5 text-xs text-slate-500">
-        The time you visited decides which part of the day your ratings count towards.
+        The time you visited decides which part of the day your ratings count towards. You
+        can rate this place once for each part of the day — a bus stop at noon and at
+        midnight are not the same place.
       </p>
 
       <label className="mt-4 block text-xs text-slate-400">When did you visit?</label>

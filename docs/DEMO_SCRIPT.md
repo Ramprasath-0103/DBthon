@@ -69,6 +69,12 @@ Lighting / Security / Harassment down to 1, submit.
 
 The slider jumps to **Night** on its own and the score drops.
 
+If you have time, rate the *same* place again with a 9am visit:
+
+> "Same place, same account, but a different time of day — so it's a separate review. That
+> constraint is `UNIQUE(user_id, location_id, time_bucket)`, and the bucket in it is the one
+> the database derived, not one I typed."
+
 ---
 
 ## If something breaks
@@ -77,5 +83,5 @@ The slider jumps to **Night** on its own and the score drops.
 |---|---|
 | Map is a dark rectangle | No internet — tiles are remote. Nothing else is. |
 | "Could not reach the API" | The server on 8787 died. `cd server && npm run dev` |
-| "You have already reviewed this place" | One review per place per person. Use another pin, or re-seed. |
+| "You have already rated this place for that time of day" | Change the visit time to a different part of the day. The demo accounts start with zero reviews, so all four buckets are free. |
 | Scores look wrong after rehearsing | `cd server && npm run db:seed` |

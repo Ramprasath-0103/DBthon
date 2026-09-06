@@ -12,7 +12,7 @@ import { insertLocations, type NewLocation } from "../src/repo/locations.js";
 import { mulberry32, gaussian, intBetween, shuffled, clamp } from "../src/lib/random.js";
 import { TIME_BUCKETS, BUCKET_HOURS, istInstant, type Bucket } from "../src/lib/time.js";
 import {
-  FACTORS, CATEGORIES, PROFILES, CATEGORY_CAPS, categoryForTags,
+  FACTORS, CATEGORIES, PROFILES, CATEGORY_CAPS, categoryForTags, englishName,
   type CategoryKey, type FactorCode,
 } from "../src/seed/profiles.js";
 
@@ -90,6 +90,7 @@ async function main() {
   const raw = JSON.parse(await readFile(CACHE, "utf8")) as { elements: OsmElement[] };
   const byCategory = new Map<CategoryKey, NewLocation[]>();
   const seenNames = new Set<string>();
+  const dropped: string[] = [];
 
   for (const el of raw.elements) {
     const tags = el.tags;
@@ -101,7 +102,11 @@ async function main() {
     const lon = el.lon ?? el.center?.lon;
     if (lat === undefined || lon === undefined) continue;
 
-    const name = tags.name.trim();
+    const name = englishName(tags);
+    if (name === null) {
+      dropped.push(tags.name.trim()); // no English name available — see englishName()
+      continue;
+    }
     if (seenNames.has(name.toLowerCase())) continue; // OSM repeats names across nodes
     seenNames.add(name.toLowerCase());
 
@@ -122,6 +127,12 @@ async function main() {
 
   const inserted = await insertLocations(chosen);
   console.log(`Locations: ${inserted.length} inserted`);
+  if (dropped.length > 0) {
+    console.warn(
+      `Dropped ${dropped.length} place(s) with no English name and no override in ` +
+        `NAME_OVERRIDES: ${dropped.join(", ")}`,
+    );
+  }
 
   // ---------------------------------------------------------------- users
   // One bcrypt hash reused across seed accounts. Real registrations hash per user;
@@ -146,8 +157,15 @@ async function main() {
     { email: "demo.male@safeway.test", displayName: "Demo (male)", passwordHash: demoHash, gender: "male" as const },
   ];
   const users = await prisma.user.createManyAndReturn({ data: userData });
-  const femaleIds = users.filter((u) => u.gender === "female").map((u) => u.id);
-  console.log(`Users: ${users.length} (${femaleIds.length} female, ${users.length - femaleIds.length} male)`);
+  // Demo accounts are deliberately excluded from seeded reviews, so all four
+  // buckets on every place are free during a live demo.
+  const femaleIds = users
+    .filter((u) => u.gender === "female" && !u.email.endsWith("@safeway.test"))
+    .map((u) => u.id);
+  console.log(
+    `Users: ${users.length} (${users.filter((u) => u.gender === "female").length} female, ` +
+      `${users.filter((u) => u.gender === "male").length} male); ${femaleIds.length} seed reviewers`,
+  );
 
   // ---------------------------------------------------------------- reviews
   // 5 locations are left under 3 reviews so the "insufficient data" state is visible.
@@ -178,21 +196,25 @@ async function main() {
       FACTORS.map((f) => [f.code, gaussian(rand) * 0.35]),
     );
 
-    const reviewers = shuffled(rand, femaleIds);
-    let cursor = 0;
-
-    const plan: Bucket[] = [];
+    // Reviewers are drawn per bucket, so the same woman may rate this place in
+    // more than one part of the day — which the (user, location, bucket) unique
+    // constraint permits and the product depends on.
+    const plan: { bucket: Bucket; userId: number }[] = [];
     if (sparse.has(i)) {
-      for (let n = 0; n < intBetween(rand, 1, 2); n++) plan.push(TIME_BUCKETS[intBetween(rand, 0, 3)]!);
+      const pool = shuffled(rand, femaleIds);
+      for (let n = 0; n < intBetween(rand, 1, 2); n++) {
+        plan.push({ bucket: TIME_BUCKETS[intBetween(rand, 0, 3)]!, userId: pool[n]! });
+      }
     } else {
       for (const bucket of TIME_BUCKETS) {
-        for (let n = 0; n < intBetween(rand, 3, 5); n++) plan.push(bucket);
+        const n = intBetween(rand, 3, 5);
+        for (const userId of shuffled(rand, femaleIds).slice(0, n)) {
+          plan.push({ bucket, userId });
+        }
       }
     }
 
-    for (const bucket of plan) {
-      const userId = reviewers[cursor++];
-      if (userId === undefined) break; // one review per person per place
+    for (const { bucket, userId } of plan) {
 
       const daysAgo = intBetween(rand, 1, 545); // ~18 months
       const hours = BUCKET_HOURS[bucket];
