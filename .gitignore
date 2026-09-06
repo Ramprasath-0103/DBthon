@@ -4,4 +4,3 @@ dist/
 *.tsbuildinfo
 .DS_Store
 server/src/generated/
-data/cache/

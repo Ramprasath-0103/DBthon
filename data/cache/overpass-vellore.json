@@ -1,0 +1,4046 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-06T07:06:48Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 724100869,
+      "lat": 12.9660538,
+      "lon": 79.1372387,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Chitoor Bus Stand"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1064558843,
+      "lat": 12.9699373,
+      "lon": 79.1543436,
+      "tags": {
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "brand:wikipedia": "en:Indian Bank",
+        "name": "Indian Bank",
+        "name:en": "Indian Bank",
+        "opening_hours": "Mo-Sa 09:00-17:30",
+        "website": "https://www.indianbank.in/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1064559868,
+      "lat": 12.9700963,
+      "lon": 79.154349,
+      "tags": {
+        "name": "All Maart",
+        "opening_hours": "Mo-Sa 09:00-20:30",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1079605259,
+      "lat": 12.9705339,
+      "lon": 79.1544609,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Canteen",
+        "opening_hours": "Mo-Sa 08:00-20:45"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1348980037,
+      "lat": 12.9221524,
+      "lon": 79.1325219,
+      "tags": {
+        "amenity": "bus_station",
+        "bus": "yes",
+        "name": "Vellore Old Bus Stand",
+        "public_transport": "station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1619807760,
+      "lat": 12.9697492,
+      "lon": 79.1551859,
+      "tags": {
+        "amenity": "atm",
+        "brand": "HDFC Bank",
+        "brand:en": "HDFC Bank",
+        "brand:wikidata": "Q631047",
+        "cash_in": "yes",
+        "currency:INR": "yes",
+        "drive_through": "no",
+        "indoor": "yes",
+        "name": "HDFC Bank",
+        "note": "Contributors are requested to not edit the \"brand\", \"brand:en\", \"brand:wikidata\", \"operator\", \"operator:en\" and \"operator:wikidata\" tags. (2025/03/03)",
+        "opening_hours": "24/7",
+        "operator": "HDFC Bank",
+        "operator:en": "HDFC Bank",
+        "operator:wikidata": "Q631047",
+        "short_name": "HDFC"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1754861229,
+      "lat": 12.8795939,
+      "lon": 79.1305769,
+      "tags": {
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "State Bank of India",
+        "brand:wikidata": "Q1340361",
+        "brand:wikipedia": "en:State Bank of India",
+        "name": "State Bank of India",
+        "short_name": "SBI"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1754861232,
+      "lat": 12.8793817,
+      "lon": 79.1340678,
+      "tags": {
+        "addr:street": "Bagayam",
+        "amenity": "hospital",
+        "designation": "CHAD",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "psychiatry",
+        "name:en": "CHAD (CMC) Hospital",
+        "operator": "Christian Medical College",
+        "operator:wikidata": "Q3532259",
+        "website": "http://cmcvellore.ac.in"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2473168727,
+      "lat": 12.9361927,
+      "lon": 79.1614835,
+      "tags": {
+        "amenity": "bank",
+        "atm": "no",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "brand:wikipedia": "en:Indian Bank",
+        "name": "Indian Bank",
+        "name:en": "Indian Bank",
+        "website": "https://www.indianbank.in/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2473173911,
+      "lat": 12.9351993,
+      "lon": 79.1515593,
+      "tags": {
+        "amenity": "atm",
+        "brand": "State Bank of India",
+        "brand:en": "State Bank of India",
+        "brand:wikidata": "Q1340361",
+        "brand:wikipedia": "en:State Bank of India",
+        "currency:INR": "yes",
+        "drive_through": "no",
+        "indoor": "yes",
+        "name": "State Bank of India",
+        "note": "Contributors are requested to not edit the \"brand\", \"brand:en\", \"brand:wikidata\", \"operator\", \"operator:en\" and \"operator:wikidata\" tags. (2025/03/03)",
+        "opening_hours": "24/7",
+        "operator": "State Bank of India",
+        "operator:en": "State Bank of India",
+        "operator:wikidata": "Q1340361",
+        "operator:wikipedia": "en:State Bank of India",
+        "short_name": "SBI"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2473175415,
+      "lat": 12.9351366,
+      "lon": 79.1518812,
+      "tags": {
+        "amenity": "bank",
+        "atm": "yes",
+        "branch": "Sathuvachari",
+        "brand": "Karnataka Bank",
+        "brand:wikidata": "Q2042632",
+        "brand:wikipedia": "en:Karnataka Bank",
+        "name": "Karnataka Bank",
+        "operator": "Karnataka bank ATM"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3502547169,
+      "lat": 12.9497891,
+      "lon": 79.1371911,
+      "tags": {
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "kerb": "no",
+        "lit": "no",
+        "name": "Silk Mill",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3502549752,
+      "lat": 12.9497479,
+      "lon": 79.1369696,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Silk Mill",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4461507689,
+      "lat": 12.9095302,
+      "lon": 79.1360203,
+      "tags": {
+        "amenity": "atm",
+        "brand": "ICICI Bank",
+        "brand:en": "ICICI Bank",
+        "brand:wikidata": "Q1653258",
+        "brand:wikipedia": "en:ICICI Bank",
+        "currency:INR": "yes",
+        "drive_through": "no",
+        "indoor": "yes",
+        "name": "ICICI Bank",
+        "note": "Contributors are requested to not edit the \"brand\", \"brand:en\", \"brand:wikidata\", \"operator\", \"operator:en\" and \"operator:wikidata\" tags. (2025/03/03)",
+        "opening_hours": "24/7",
+        "operator": "ICICI Bank",
+        "operator:en": "ICICI Bank",
+        "operator:wikidata": "Q1653258",
+        "operator:wikipedia": "en:ICICI Bank",
+        "short_name": "ICICI"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4467426589,
+      "lat": 12.9102033,
+      "lon": 79.1419737,
+      "tags": {
+        "amenity": "atm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4648488291,
+      "lat": 12.9240832,
+      "lon": 79.1369206,
+      "tags": {
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "cuisine": "chinese;asian;indian",
+        "level": "1",
+        "name:en": "Chinatown",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4648488292,
+      "lat": 12.9320193,
+      "lon": 79.1347766,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "burger;sandwich;international;ice_cream;grill;crepe;cake;coffee_shop;pasta;diner;chicken;italian_pizza;fish;breakfast;french;tea;chinese;american;italian",
+        "name:en": "Berry's Bistro"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4648502892,
+      "lat": 12.9307591,
+      "lon": 79.1359631,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "african",
+        "name:en": "Fry yo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4648502893,
+      "lat": 12.9673437,
+      "lon": 79.1578406,
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "burger;sandwich;ice_cream;cake;pasta;pizza;chicken;italian_pizza",
+        "name:en": "Qt 50"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693430387,
+      "lat": 12.9053114,
+      "lon": 79.135781,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Velappadi",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693430388,
+      "lat": 12.9016131,
+      "lon": 79.1352936,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sankaranpalayam",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693432897,
+      "lat": 12.8835295,
+      "lon": 79.1226392,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Female Prison/Jail",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693432901,
+      "lat": 12.9586457,
+      "lon": 79.137176,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Odai Pillaiyar Bus Stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693432902,
+      "lat": 12.9691359,
+      "lon": 79.1374469,
+      "tags": {
+        "amenity": "library",
+        "name": "Library, dharapadavedu"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693433969,
+      "lat": 12.9288325,
+      "lon": 79.1338393,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "National theatre",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693433970,
+      "lat": 12.9255495,
+      "lon": 79.1333775,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "CMC Hospital",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693433971,
+      "lat": 12.9189104,
+      "lon": 79.132397,
+      "tags": {
+        "amenity": "marketplace",
+        "name": "Anna Bazaar"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693433972,
+      "lat": 12.9148917,
+      "lon": 79.1326567,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Raja theatre",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693433973,
+      "lat": 12.9128067,
+      "lon": 79.1331136,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "CMC Eye Hospital",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693433977,
+      "lat": 12.880086,
+      "lon": 79.1347141,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bagayam",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434177,
+      "lat": 12.9076027,
+      "lon": 79.1339198,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Thinakaran",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434182,
+      "lat": 12.8898868,
+      "lon": 79.13575,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Agaravaram",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434183,
+      "lat": 12.8847782,
+      "lon": 79.1357444,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Otteri",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434185,
+      "lat": 12.8792168,
+      "lon": 79.1300117,
+      "tags": {
+        "highway": "bus_stop",
+        "name": "Christian Medical College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434186,
+      "lat": 12.8788583,
+      "lon": 79.1247793,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Thanthai Periyar Engineering College",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434789,
+      "lat": 12.8925195,
+      "lon": 79.1356592,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kuppam",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434797,
+      "lat": 12.9497078,
+      "lon": 79.1414177,
+      "tags": {
+        "amenity": "marketplace",
+        "name": "Organic market, TN gov."
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434799,
+      "lat": 12.9565869,
+      "lon": 79.1417922,
+      "tags": {
+        "amenity": "bus_station",
+        "name": "TNEB bus stop"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434800,
+      "lat": 12.9576369,
+      "lon": 79.1452371,
+      "tags": {
+        "amenity": "college",
+        "name": "Auxilium arts & science college"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434844,
+      "lat": 12.9584735,
+      "lon": 79.1416183,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Auxilium rountanna",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434959,
+      "lat": 12.8968267,
+      "lon": 79.1296743,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Circuit House",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434960,
+      "lat": 12.8996564,
+      "lon": 79.1310977,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Tollgate",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434966,
+      "lat": 12.9468759,
+      "lon": 79.1369654,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kangeyanallur road",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434967,
+      "lat": 12.9501757,
+      "lon": 79.1391475,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Hundreds heritage"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434968,
+      "lat": 12.9501164,
+      "lon": 79.1413895,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "DKM",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434973,
+      "lat": 12.9501903,
+      "lon": 79.1420158,
+      "tags": {
+        "amenity": "library",
+        "name": "அறிஞர் அண்ணா கிளை நூலகம்"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434974,
+      "lat": 12.9497376,
+      "lon": 79.1414279,
+      "tags": {
+        "amenity": "pharmacy",
+        "name": "Medical store, Vellore agri producers co-operative society"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434978,
+      "lat": 12.9559868,
+      "lon": 79.1416785,
+      "tags": {
+        "brand": "More",
+        "brand:wikidata": "Q6910891",
+        "name": "More",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434990,
+      "lat": 12.8981312,
+      "lon": 79.1308183,
+      "tags": {
+        "amenity": "marketplace",
+        "name": "உழவர் சந்தை - வேலூர்"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434991,
+      "lat": 12.9029978,
+      "lon": 79.1316656,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lakshmi theatre",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434992,
+      "lat": 12.9071184,
+      "lon": 79.1318875,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Muslim high school",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4693434993,
+      "lat": 12.9080014,
+      "lon": 79.1317904,
+      "tags": {
+        "amenity": "marketplace",
+        "name": "Karpagam co-op stores"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4714375690,
+      "lat": 12.9314742,
+      "lon": 79.1362196,
+      "tags": {
+        "addr:full": "No. 27/4, First East Main, Gandhinagar, Vellore – 632 006",
+        "air_conditioning": "yes",
+        "amenity": "restaurant",
+        "cuisine": "regional;indian;south_indian;chicken;curry;fish;soup",
+        "delivery": "yes",
+        "name:en": "The Vellore kitchen",
+        "phone": "+91 0416 2243330;+91 70920 23330",
+        "takeaway": "yes",
+        "website": "https://www.thevellorekitchen.in/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4727143391,
+      "lat": 12.9320348,
+      "lon": 79.137884,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Green Circle",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4750431522,
+      "lat": 12.9195812,
+      "lon": 79.093986,
+      "tags": {
+        "addr:postcode": "632010",
+        "addr:street": "near Melmonavoor school, Melmonavoor, vellore, Tamilnadu-632010",
+        "amenity": "bus_station",
+        "bus": "yes",
+        "name:en": "Melmonavoor Bus stop",
+        "public_transport": "station"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5367652692,
+      "lat": 12.9031971,
+      "lon": 79.1319186,
+      "tags": {
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "HDFC Bank",
+        "brand:wikidata": "Q631047",
+        "brand:wikipedia": "en:HDFC Bank",
+        "name": "HDFC Bank",
+        "short_name": "HDFC"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5836443755,
+      "lat": 12.9199344,
+      "lon": 79.1327613,
+      "tags": {
+        "amenity": "marketplace",
+        "name": "Nethajimarket",
+        "organization": "cooperative"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367812225,
+      "lat": 12.9149173,
+      "lon": 79.0715789,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Mottur"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367812227,
+      "lat": 12.9688212,
+      "lon": 79.145653,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Old Katpadi",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367812228,
+      "lat": 12.9681282,
+      "lon": 79.155531,
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "VIT",
+        "name:en": "VIT",
+        "name:ta": "விஐடி",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367812229,
+      "lat": 12.9669331,
+      "lon": 79.1716526,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Brahmapuram",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367890805,
+      "lat": 12.9658761,
+      "lon": 79.1664946,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Thangal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367890908,
+      "lat": 12.9501552,
+      "lon": 79.1414844,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Gandhi Nagar",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367891887,
+      "lat": 12.9684668,
+      "lon": 79.1823318,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Koranthangal",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367892592,
+      "lat": 12.9451347,
+      "lon": 79.1367394,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Virudhampet",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367892628,
+      "lat": 12.9681018,
+      "lon": 79.192663,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Sevoor"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367892629,
+      "lat": 12.9683995,
+      "lon": 79.2056253,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Arumparutti"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367892630,
+      "lat": 12.9703025,
+      "lon": 79.2189888,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Karnampet"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367893414,
+      "lat": 12.9678947,
+      "lon": 79.1952866,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Srihari hospital"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367899493,
+      "lat": 12.968839,
+      "lon": 79.21294,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Gandhi nagar"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367904201,
+      "lat": 12.9161535,
+      "lon": 79.0890042,
+      "tags": {
+        "amenity": "college",
+        "name:en": "ITI"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367913796,
+      "lat": 12.925759,
+      "lon": 79.1333405,
+      "tags": {
+        "amenity": "bank",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "brand:wikipedia": "en:Indian Bank",
+        "name": "Indian Bank",
+        "name:en": "Indian Bank"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6367914187,
+      "lat": 12.9218424,
+      "lon": 79.1318764,
+      "tags": {
+        "amenity": "bank",
+        "brand": "Canara Bank",
+        "brand:pa": "ਕੇਨਰਾ ਬੈਂਕ",
+        "brand:ur": "کینرا بینک",
+        "brand:wikidata": "Q2003777",
+        "brand:wikipedia": "en:Canara Bank",
+        "brand:wikipedia:pa": "ਕੇਨਰਾ ਬੈਂਕ",
+        "name": "Canara Bank",
+        "name:pa": "ਕੇਨਰਾ ਬੈਂਕ",
+        "name:ur": "کینرا بینک"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6914957590,
+      "lat": 12.8709241,
+      "lon": 79.089919,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Thirumalaikodi,Near Narayani Amman Tmple",
+        "addr:postcode": "632055",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Sri Narayani Hospital and Research Centre",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6915394481,
+      "lat": 12.9370042,
+      "lon": 79.1629033,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sathuvachari,Vellore",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "multi speciality",
+        "name": "A.S.A Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6932166589,
+      "lat": 12.9310563,
+      "lon": 79.1554011,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "#10, 19Th Cross, Phase Ii,Sathuvachary",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Vellore Eye and Dental Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6932966222,
+      "lat": 12.9346861,
+      "lon": 79.1536966,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "44,Arcot Road, Phase -Ii,Sathuvachary",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Nalam Medical Center and Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6933038551,
+      "lat": 12.924509,
+      "lon": 79.1401702,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "No.452, 454, Main Bazar Road,Lic Building Backside,Saidapet",
+        "addr:postcode": "632012",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Indira Nursing Home, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6933824568,
+      "lat": 12.9088334,
+      "lon": 79.1316354,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "No 30 /1, Officers Lane",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Vasan Eye Care Hospital, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6936339727,
+      "lat": 12.8957453,
+      "lon": 79.1362837,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "#5, Ponniamman Koil St",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Raj Nursing Home, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6936359946,
+      "lat": 12.9684926,
+      "lon": 79.1369931,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Tarapada Vedu, Taj Complex, No. 7/8, Pilliyar Kovil Street, Road, Vellore",
+        "addr:postcode": "632007",
+        "addr:state": "Tamil Nadu",
+        "addr:subdistrict": "Katpadi",
+        "amenity": "hospital",
+        "name": "Lakshmi Hospital, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6936359962,
+      "lat": 12.9459476,
+      "lon": 79.1373874,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Kalinjur Kalinjur Gandhi Nagar Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Kumaran Hospital, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6936684357,
+      "lat": 12.9938366,
+      "lon": 79.1969506,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Karigiri, The Schieffelin Institute Of Health Research & Training Centre, Karigiri",
+        "addr:postcode": "632106",
+        "addr:state": "Tamil Nadu",
+        "addr:subdistrict": "Katpadi",
+        "amenity": "hospital",
+        "name": "The Schieffelin Institute Of Health Research & Training Centre, Karigiri",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6936709044,
+      "lat": 12.9343057,
+      "lon": 79.152562,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Vellore, C-3 Arcot Rd Sathuvachari, Vellore -632009",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr Sivakumar Multi Speciality Hospital, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6936709066,
+      "lat": 12.9162622,
+      "lon": 79.1353758,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "No:49, Filterbed Road",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Popular Eye Clinic",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6936770777,
+      "lat": 12.9382969,
+      "lon": 79.1684776,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Vellore, Sathuvachary, Phase-I, Vallalar",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Sandhya Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6937498370,
+      "lat": 12.9106975,
+      "lon": 79.131622,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "No.19/1, Officers Line",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr. Agarwal`S Eye Hospital Ltd",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6985046312,
+      "lat": 12.9352544,
+      "lon": 79.1515593,
+      "tags": {
+        "amenity": "atm",
+        "brand": "HDFC Bank",
+        "brand:en": "HDFC Bank",
+        "brand:wikidata": "Q631047",
+        "brand:wikipedia": "en:HDFC Bank",
+        "currency:INR": "yes",
+        "drive_through": "no",
+        "indoor": "yes",
+        "name": "HDFC Bank",
+        "note": "Contributors are requested to not edit the \"brand\", \"brand:en\", \"brand:wikidata\", \"operator\", \"operator:en\" and \"operator:wikidata\" tags. (2025/03/03)",
+        "opening_hours": "24/7",
+        "operator": "HDFC Bank",
+        "operator:en": "HDFC Bank",
+        "operator:wikidata": "Q631047",
+        "operator:wikipedia": "en:HDFC Bank",
+        "short_name": "HDFC"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6985066915,
+      "lat": 12.9357884,
+      "lon": 79.1512133,
+      "tags": {
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "name": "Indian Bank"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6986600356,
+      "lat": 12.9678948,
+      "lon": 79.1559593,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Lassi cream"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6986600357,
+      "lat": 12.9678546,
+      "lon": 79.1558591,
+      "tags": {
+        "amenity": "cafe"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6986623547,
+      "lat": 12.9679124,
+      "lon": 79.1558851,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Wraps and Fries"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7068651885,
+      "lat": 12.9110998,
+      "lon": 79.1324229,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Voorhees College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7116471385,
+      "lat": 12.9466941,
+      "lon": 79.2061296,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Perumuhai",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7116471387,
+      "lat": 12.9386137,
+      "lon": 79.1680602,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Satuvachery",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7126064285,
+      "lat": 12.9465935,
+      "lon": 79.1368135,
+      "tags": {
+        "amenity": "bank",
+        "brand": "Canara Bank",
+        "brand:en": "Canara Bank",
+        "brand:hi": "केनरा बैंक",
+        "brand:kn": "ಕೆನರಾ ಬ್ಯಾಂಕ್",
+        "brand:pa": "ਕੇਨਰਾ ਬੈਂਕ",
+        "brand:pnb": "کینرا بینک",
+        "brand:ur": "کینرا بینک",
+        "brand:wikidata": "Q2003777",
+        "name": "Canara Bank",
+        "name:en": "Canara Bank",
+        "name:hi": "केनरा बैंक",
+        "name:kn": "ಕೆನರಾ ಬ್ಯಾಂಕ್",
+        "name:pa": "ਕੇਨਰਾ ਬੈਂਕ",
+        "name:pnb": "کینرا بینک",
+        "name:ur": "کینرا بینک"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7126102185,
+      "lat": 12.9499659,
+      "lon": 79.1369603,
+      "tags": {
+        "amenity": "pharmacy",
+        "brand": "Apollo Pharmacy",
+        "brand:wikidata": "Q62562612",
+        "healthcare": "pharmacy",
+        "name": "Apollo Pharmacy",
+        "name:en": "Apollo Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7126158986,
+      "lat": 12.9726015,
+      "lon": 79.067762,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Latheri"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7174026686,
+      "lat": 12.9756952,
+      "lon": 79.1092586,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Keelvadugan Kuttai"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7174027185,
+      "lat": 12.9755563,
+      "lon": 79.0937515,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Karasamangalam"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7174027285,
+      "lat": 12.976844,
+      "lon": 79.0829815,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Thondan thulasi"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7174466287,
+      "lat": 12.9392676,
+      "lon": 79.1687658,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name:en": "Rangapuram",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7181669848,
+      "lat": 12.9153529,
+      "lon": 79.1335011,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "#32, G.P.H. Road,Kosapet",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Sankari Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7186887385,
+      "lat": 12.9948307,
+      "lon": 79.1324304,
+      "tags": {
+        "highway": "bus_stop",
+        "name:en": "Mettukulam"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7200395586,
+      "lat": 12.93493,
+      "lon": 79.154156,
+      "tags": {
+        "name:en": "Kumaran Supermarket",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7200398285,
+      "lat": 12.9137954,
+      "lon": 79.1349428,
+      "tags": {
+        "addr:street": "Thennamara Theru",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name:en": "Dr Thirumal Babu",
+        "phone": "9003070065"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289024,
+      "lat": 12.9153169,
+      "lon": 79.0567052,
+      "tags": {
+        "addr:block": "Anaicut",
+        "addr:district": "Vellore",
+        "addr:full": "Channai To Bangalore High Way, Poigai, Poigai",
+        "addr:postcode": "635114",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "name": "Poigai Government Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289036,
+      "lat": 12.9059984,
+      "lon": 79.1355217,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Vellore, Arani Road, Velapadi",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Varshini Hospital, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289043,
+      "lat": 12.9030309,
+      "lon": 79.1334705,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Vellore, Thiyagarajapuram",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Arun Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289049,
+      "lat": 12.9156633,
+      "lon": 79.1346498,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Government Pentland Hospital, Near Sri Krishna Residancy, Vellroe, Government Pentland Hospital Road",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Government Pentland Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289055,
+      "lat": 12.91051,
+      "lon": 79.131432,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Vellore, Masilamani Hostel Road, Officers Line",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Mummy Hospital, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289077,
+      "lat": 12.872987,
+      "lon": 79.133123,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Polur - Vellore Rd, Ramalinga Nagar, Edyansathu, Vellore",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "name": "Dinesh Hospital, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289119,
+      "lat": 12.91395,
+      "lon": 79.133873,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "50, Thennamara Street, Kosapet, Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "JC Nursing Home, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289125,
+      "lat": 12.8704789,
+      "lon": 79.0900539,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Sri Narayani Hospital & Research Centre, Ariyur, Vellroe, Thirumalaikodi",
+        "addr:postcode": "632055",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Sri Narayani Hospital & Research Centre, Ariyur",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257289127,
+      "lat": 12.908625,
+      "lon": 79.1255813,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Vellore, Thennamaram st",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr. Santhakumari Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257421542,
+      "lat": 12.93425,
+      "lon": 79.158739,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Behind Sub Court, Phase 2, Sathuvachari, Vellore",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Baba Hospital, Sathuvachari",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257421568,
+      "lat": 12.93239,
+      "lon": 79.156815,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "Vellore, Phase-2 , Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Sarada Multispeciality Hospital",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7257421598,
+      "lat": 12.936069,
+      "lon": 79.1643137,
+      "tags": {
+        "addr:block": "Vellore Corp",
+        "addr:district": "Vellore",
+        "addr:full": "14 / 87, Vellore, 7Th Cross, Phase - 1, Housing Board Office Road, Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Sakthi Amma Hospital, Vellore",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7296369781,
+      "lat": 12.9193923,
+      "lon": 79.1355204,
+      "tags": {
+        "addr:street": "Baqiyat street",
+        "amenity": "college",
+        "description": "Arabic College established in 1857",
+        "name": "Baqiyat Salihat Arabic College",
+        "opening_hours": "Mo-Th, Sa, Su 08:00-18:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7526716317,
+      "lat": 12.9504625,
+      "lon": 79.1416444,
+      "tags": {
+        "amenity": "atm",
+        "brand": "Andhra Bank",
+        "brand:wikidata": "Q2003476",
+        "name": "Andhra Bank",
+        "operator": "Andhra Bank",
+        "operator:wikidata": "Q2003476"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7526716787,
+      "lat": 12.9499887,
+      "lon": 79.1414465,
+      "tags": {
+        "amenity": "atm",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "name": "Indian Bank",
+        "operator": "Indian Bank",
+        "operator:wikidata": "Q2003789"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7526741426,
+      "lat": 12.9502942,
+      "lon": 79.137376,
+      "tags": {
+        "addr:street": "1st East Main Road",
+        "amenity": "atm",
+        "brand": "ICICI Bank",
+        "brand:en": "ICICI Bank",
+        "brand:wikidata": "Q1653258",
+        "currency:INR": "yes",
+        "drive_through": "no",
+        "indoor": "yes",
+        "name": "ICICI Bank",
+        "note": "Contributors are requested to not edit the \"brand\", \"brand:en\", \"brand:wikidata\", \"operator\", \"operator:en\" and \"operator:wikidata\" tags. (2025/03/03)",
+        "opening_hours": "24/7",
+        "operator": "ICICI Bank",
+        "operator:en": "ICICI Bank",
+        "operator:wikidata": "Q1653258",
+        "short_name": "ICICI"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7526741486,
+      "lat": 12.9505901,
+      "lon": 79.1415046,
+      "tags": {
+        "name": "Thirumagal Super Store",
+        "shop": "supermarket"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7526752747,
+      "lat": 12.9502024,
+      "lon": 79.1375004,
+      "tags": {
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Rajan medicals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122233,
+      "lat": 12.901862,
+      "lon": 79.1355807,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sankaranpalayam",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Kalai Siddha Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122234,
+      "lat": 12.8951943,
+      "lon": 79.1271164,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Rahim Nagar, Palavansathu, Thorapadi",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. Dhanalakshmi ENT Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122236,
+      "lat": 12.9346048,
+      "lon": 79.15677,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Rasi Skin Cosmetic & Laser Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122237,
+      "lat": 12.901677,
+      "lon": 79.131297,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. E Sivakumar ENT Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122238,
+      "lat": 12.9597861,
+      "lon": 79.1386445,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Herbocare Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122240,
+      "lat": 12.8936736,
+      "lon": 79.1357186,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sainathapuram, RV Nagar",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ramachandra Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122241,
+      "lat": 12.9520393,
+      "lon": 79.144871,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. Deepa Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122242,
+      "lat": 12.889212,
+      "lon": 79.135233,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Virupatchipuram, RV Nagar",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Susi Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122244,
+      "lat": 12.9590135,
+      "lon": 79.1388363,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Bharathi Nagar, Katpadi",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. Gowri's Childrens Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122245,
+      "lat": 12.9566197,
+      "lon": 79.1418751,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Gandhi Nagar",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Swasam Naturecure and Yoga Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122246,
+      "lat": 12.905718,
+      "lon": 79.1352986,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Velapadi, Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "S.K. Nambi Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122247,
+      "lat": 12.9399676,
+      "lon": 79.1736207,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Rangapuram",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Sanjeevan Ayurveda Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122249,
+      "lat": 12.9016809,
+      "lon": 79.1316299,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Vellore Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122250,
+      "lat": 12.9082477,
+      "lon": 79.1251947,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "R N Palayam, Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Church Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122251,
+      "lat": 12.9522294,
+      "lon": 79.144835,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Shivam Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122252,
+      "lat": 12.898644,
+      "lon": 79.132777,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Krishna Nagar",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Aarogya Clinic Multi Speciality Centre",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122254,
+      "lat": 12.9417847,
+      "lon": 79.1658121,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. Sandhya's Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122255,
+      "lat": 12.9154281,
+      "lon": 79.1352036,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Srinivasan Nagar",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "G P Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122256,
+      "lat": 12.9565077,
+      "lon": 79.1414803,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Kurinji Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122257,
+      "lat": 12.8773311,
+      "lon": 79.1066157,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Mahalakshmi Nagar, Thorapadi",
+        "addr:postcode": "632055",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Best Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122258,
+      "lat": 12.9394923,
+      "lon": 79.1716334,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Arcot Road, Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Arulalan Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122260,
+      "lat": 12.888341,
+      "lon": 79.13573,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Virupatchipuram, RV Nagar",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Parul Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122261,
+      "lat": 12.9165884,
+      "lon": 79.1366865,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Usha Nursing Home",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122262,
+      "lat": 12.9163413,
+      "lon": 79.1342217,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Saidapet",
+        "addr:postcode": "632004",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr. Venkateswara Rao Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122263,
+      "lat": 12.9577933,
+      "lon": 79.136876,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Venkatraman Nagar, Katpadi",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Akshaya General and Dental Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122264,
+      "lat": 12.8926807,
+      "lon": 79.1351609,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Palavansathukuppam, Allapuram, Thorapadi",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Arul Jothi Nursing Home",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122265,
+      "lat": 12.904517,
+      "lon": 79.135956,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Velapadi",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "K K R Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122267,
+      "lat": 12.9218545,
+      "lon": 79.1125805,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Konavattam",
+        "addr:postcode": "632013",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "C.M Dental Clinic and Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122268,
+      "lat": 12.9578429,
+      "lon": 79.1432088,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Suthanthira Ponvizha Nagar, Gandhi Nagar",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Sterling Diabetes Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122269,
+      "lat": 12.9502466,
+      "lon": 79.1368111,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Katpadi",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Sreenivasa ENT Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122270,
+      "lat": 12.8898385,
+      "lon": 79.1344238,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Virupatchipuram, RV Nagar",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Storke Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122271,
+      "lat": 12.909147,
+      "lon": 79.1333437,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Kosapet",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Cure Multispeciality Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122272,
+      "lat": 12.9338287,
+      "lon": 79.1579666,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. K.P. Arjunan Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122273,
+      "lat": 12.8837199,
+      "lon": 79.1353133,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Bagayam",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Grace Skin Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122275,
+      "lat": 12.9504065,
+      "lon": 79.1387112,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Saisugam Siddha & Ayurvedha Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122276,
+      "lat": 12.903342,
+      "lon": 79.13197,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Anna Salai",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Abitha Fertility Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122277,
+      "lat": 12.9030108,
+      "lon": 79.1324839,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sankaranpalayam",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dr. Pari's Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122278,
+      "lat": 12.9527599,
+      "lon": 79.1400263,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "11th East Cross Road, Suthanthira Ponvizha Nagar, Gandhi Nagar",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Rama Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122279,
+      "lat": 12.9571623,
+      "lon": 79.141955,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Suthanthira Ponvizha Nagar, Gandhi Nagar",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. Mohan's Diabetes Specialities Centre",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122280,
+      "lat": 12.9586875,
+      "lon": 79.139021,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Katpadi",
+        "addr:postcode": "632007",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. Ashok Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122281,
+      "lat": 12.8942521,
+      "lon": 79.1266602,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Periya Allapuram, Vellore",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Gowtham Clinic Child Care",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122282,
+      "lat": 12.9170061,
+      "lon": 79.138924,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sarbanamedu",
+        "addr:postcode": "632012",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Fathima Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122283,
+      "lat": 12.926369,
+      "lon": 79.133473,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Thottapalayam",
+        "addr:postcode": "632004",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Vellore Speciality Centre",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122284,
+      "lat": 12.9005046,
+      "lon": 79.1268956,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. Imran's Al-Afiya Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122285,
+      "lat": 12.9059584,
+      "lon": 79.1356261,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Guru Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122286,
+      "lat": 12.9086238,
+      "lon": 79.133113,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Kosapet",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dhinesh Hospitals",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122287,
+      "lat": 12.935049,
+      "lon": 79.156067,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "VB Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122288,
+      "lat": 12.9148799,
+      "lon": 79.134335,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632004",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Nirmal Eye Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122289,
+      "lat": 12.9000045,
+      "lon": 79.1298127,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Krishna Nagar, Veerasamy Nagar",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Kavin's Skin Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122290,
+      "lat": 12.9159232,
+      "lon": 79.1400221,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Kosapet",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Gita Mathai Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122291,
+      "lat": 12.9366802,
+      "lon": 79.1648202,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Aravind Heart Centre",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122292,
+      "lat": 12.9362461,
+      "lon": 79.1671117,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Jayanthi Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122293,
+      "lat": 12.9152754,
+      "lon": 79.1340561,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632004",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Sri Ragav Neuro Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122294,
+      "lat": 12.9130671,
+      "lon": 79.1334476,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Arni Road,Kosapet, Vellore,Tamil Nadu",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "ophthalmology;optometry",
+        "name": "Christian Medical College Schell Eye Hospital",
+        "operator": "Christian Medical College",
+        "operator:wikidata": "Q3532259",
+        "source": "OpenGovernmentData"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122295,
+      "lat": 12.9366943,
+      "lon": 79.1626536,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sathuvachari",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "DSF Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122297,
+      "lat": 12.9153215,
+      "lon": 79.1336849,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Kosapet",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Vignesh Urology Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122298,
+      "lat": 12.9218139,
+      "lon": 79.1127269,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Konnavattam",
+        "addr:postcode": "632014",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Jansi Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122300,
+      "lat": 12.9027903,
+      "lon": 79.1229312,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Rahmathpala, Kaspa",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Mm Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122301,
+      "lat": 12.936481,
+      "lon": 79.161111,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632009",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Mother's Care Diabetes Centre",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122303,
+      "lat": 12.9094519,
+      "lon": 79.1391983,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Kosapet",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Malar Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122304,
+      "lat": 12.9106339,
+      "lon": 79.1332837,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Arni Road, Kosapet",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Satish Eye Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122305,
+      "lat": 12.9002559,
+      "lon": 79.1271585,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Lakshmi Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122306,
+      "lat": 12.9112511,
+      "lon": 79.1317331,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Vasanthapuram, Kosapet",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Aruna Eye Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122307,
+      "lat": 12.9532734,
+      "lon": 79.1439111,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Gandhi Nagar",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Shree Sai Heart Centre",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122308,
+      "lat": 12.9509089,
+      "lon": 79.1393886,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Gandhi Nagar",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Dr. Vajjiravelu's Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122309,
+      "lat": 12.953283,
+      "lon": 79.138843,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Gandhi Nagar",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "AA Child Care Centre",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122310,
+      "lat": 12.9273097,
+      "lon": 79.1363179,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Aruganthampoondi, Thottapalayam",
+        "addr:postcode": "632004",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Jeevan Siddha Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122311,
+      "lat": 12.8923296,
+      "lon": 79.1354165,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Sainathapuram, RV Nagar",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "JJ Ravi Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122312,
+      "lat": 12.8716238,
+      "lon": 79.085893,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Thirumalaikodi",
+        "addr:postcode": "632055",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Balaji Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122313,
+      "lat": 12.9031171,
+      "lon": 79.1359967,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Velapadi",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Jothi Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122314,
+      "lat": 12.9061025,
+      "lon": 79.1260559,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "R N Palayam",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Ramana Cardiac & Diabetes Centre",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122315,
+      "lat": 12.922758,
+      "lon": 79.1081674,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Laxmi Nagar",
+        "addr:postcode": "632013",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Siddhavanam Health Care",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122316,
+      "lat": 12.9057921,
+      "lon": 79.1358799,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Velapadi, Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "J. Supriya Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122317,
+      "lat": 12.9341391,
+      "lon": 79.1413316,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632004",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Naruvi Hospitals",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122318,
+      "lat": 12.9521876,
+      "lon": 79.1438956,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Anush Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122319,
+      "lat": 12.876936,
+      "lon": 79.118794,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:full": "Bagayam, Palavansathu",
+        "addr:postcode": "632002",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Premji Neuro Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122321,
+      "lat": 12.9583015,
+      "lon": 79.140908,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Suraksha Healthcare Clinic",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122322,
+      "lat": 12.9060705,
+      "lon": 79.137064,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632001",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Annamalai Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7825122323,
+      "lat": 12.916289,
+      "lon": 79.1363165,
+      "tags": {
+        "addr:district": "Vellore",
+        "addr:postcode": "632006",
+        "addr:state": "Tamil Nadu",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "BPR Hospital",
+        "source": "Local Knowledge"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9647715548,
+      "lat": 12.9619524,
+      "lon": 79.0678887,
+      "tags": {
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "annangudi bus stop",
+        "network": "annangudi",
+        "operator": "tamilnadu government",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10012744271,
+      "lat": 12.9482665,
+      "lon": 79.1373947,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Vellore Kitchen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10030875228,
+      "lat": 12.9497671,
+      "lon": 79.1374152,
+      "tags": {
+        "amenity": "restaurant",
+        "diet:vegetarian": "yes",
+        "name": "The Vellore Kitchen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10030893651,
+      "lat": 12.9500445,
+      "lon": 79.138894,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Fortune Deli"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10219868365,
+      "lat": 12.9681416,
+      "lon": 79.1562523,
+      "tags": {
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "VIT",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10735185863,
+      "lat": 12.9546956,
+      "lon": 79.1352002,
+      "tags": {
+        "addr:city": "vellore",
+        "addr:housenumber": "9",
+        "addr:postcode": "632006",
+        "addr:street": "Venkatraman Nagar 1st st.,",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "dentist;endodontist;orthopaedics;implantology;microscopic_dentistry",
+        "name": "Nathan dental clinic",
+        "operator": "Dr.V.N.Narendran",
+        "operator:type": "private"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10858743984,
+      "lat": 12.879059,
+      "lon": 79.1305932,
+      "tags": {
+        "amenity": "university",
+        "name": "Christian Medical College",
+        "operator:wikidata": "Q3532259"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10926091571,
+      "lat": 12.9710704,
+      "lon": 79.1372013,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "mapillary": "798918754729883",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10946008047,
+      "lat": 12.9679765,
+      "lon": 79.1761873,
+      "tags": {
+        "addr:district": "Vellore District",
+        "addr:full": "256/2A,Brammapuram,V.I.T Chennai Road,Katpadi,Vellore District",
+        "addr:housenumber": "256/2A",
+        "amenity": "restaurant",
+        "cuisine": "regional;indian",
+        "mapillary": "1303685010504865",
+        "name": "New Punjabi Family Dhaba"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10946008048,
+      "lat": 12.9676145,
+      "lon": 79.1745868,
+      "tags": {
+        "addr:city": "Brahmapuram",
+        "addr:housenumber": "307",
+        "addr:street": "Chennai Road",
+        "amenity": "restaurant",
+        "name": "Nandini Restaurant"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10980515213,
+      "lat": 12.9714292,
+      "lon": 79.1368549,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10980515215,
+      "lat": 12.9662552,
+      "lon": 79.1374884,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Katpadi Junction- Chittor Bus Stand",
+        "name:ta": "காட்பாடி சந்திப்பு - சித்தூர் பேருந்து நிலையம்",
+        "operator": "TNSTC (Tamil Nadu State Transport Corporation)",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11869193495,
+      "lat": 12.9697356,
+      "lon": 79.1567929,
+      "tags": {
+        "amenity": "cafe",
+        "check_date": "2026-08-14",
+        "cuisine": "coffee_shop",
+        "name": "Nescafe",
+        "outdoor_seating": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11869243769,
+      "lat": 12.9731748,
+      "lon": 79.1641895,
+      "tags": {
+        "amenity": "atm",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "cash_in": "yes",
+        "check_date": "2026-07-24",
+        "name": "Indian Bank",
+        "operator": "Indian Bank",
+        "operator:wikidata": "Q2003789"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11869255665,
+      "lat": 12.9726778,
+      "lon": 79.162045,
+      "tags": {
+        "amenity": "cafe",
+        "building": "kiosk",
+        "building:levels": "1",
+        "check_date": "2026-08-03",
+        "cuisine": "coffee_shop",
+        "name": "Nescafe",
+        "roof:levels": "0"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12185335801,
+      "lat": 12.971641,
+      "lon": 79.1646292,
+      "tags": {
+        "addr:housenumber": "Shop №1",
+        "addr:postcode": "632014",
+        "addr:street": "Food Street",
+        "amenity": "cafe",
+        "cuisine": "indian",
+        "name": "Lassi House",
+        "opening_hours": "Mo-Su 09:00-19:30",
+        "outdoor_seating": "yes",
+        "phone": "+91 82484 17404"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12369335268,
+      "lat": 12.9142109,
+      "lon": 79.1315777,
+      "tags": {
+        "amenity": "library",
+        "name": "District Central Libraary"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12369335274,
+      "lat": 12.9199259,
+      "lon": 79.1319731,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12416648131,
+      "lat": 12.8853402,
+      "lon": 79.1387479,
+      "tags": {
+        "amenity": "college",
+        "isced:level": "6",
+        "name": "Govt Arts College Muthurangam",
+        "operator:type": "public"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12623101957,
+      "lat": 12.8798594,
+      "lon": 79.1225484,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Aavin Tea Stall"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12630396085,
+      "lat": 12.8800566,
+      "lon": 79.120288,
+      "tags": {
+        "amenity": "bank",
+        "atm": "yes",
+        "brand": "State Bank of India",
+        "brand:wikidata": "Q1340361",
+        "name": "State Bank of India",
+        "short_name": "SBI"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12670592688,
+      "lat": 12.8781495,
+      "lon": 79.1215233,
+      "tags": {
+        "name": "Boys Hostel B1",
+        "tourism": "hostel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12670592689,
+      "lat": 12.8784563,
+      "lon": 79.1219091,
+      "tags": {
+        "name": "Boys Hostel B3",
+        "tourism": "hostel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12670592690,
+      "lat": 12.8777382,
+      "lon": 79.1208509,
+      "tags": {
+        "name": "Boys Hostel B2",
+        "tourism": "hostel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12670592692,
+      "lat": 12.8788985,
+      "lon": 79.1204913,
+      "tags": {
+        "name": "Girls Hostel G1",
+        "tourism": "hostel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12670592693,
+      "lat": 12.8787364,
+      "lon": 79.1209399,
+      "tags": {
+        "name": "Girls Hostel G2",
+        "tourism": "hostel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12670592696,
+      "lat": 12.8795705,
+      "lon": 79.1223523,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Green Canteen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14045288875,
+      "lat": 12.9724878,
+      "lon": 79.1619766,
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2026-08-05",
+        "name": "Food Park"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14067828491,
+      "lat": 12.9124616,
+      "lon": 79.133432,
+      "tags": {
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ida Sophia Scudder Urban Health Centre"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14070559046,
+      "lat": 12.9714746,
+      "lon": 79.1626559,
+      "tags": {
+        "amenity": "atm",
+        "check_date": "2026-08-03"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14070559047,
+      "lat": 12.9712642,
+      "lon": 79.1608923,
+      "tags": {
+        "amenity": "pharmacy",
+        "check_date": "2026-08-05",
+        "healthcare": "pharmacy",
+        "name": "Saravana Medical",
+        "opening_hours": "Mo-Fr 09:00-21:00; Sa-Su 15:00-21:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14074817511,
+      "lat": 12.9728395,
+      "lon": 79.15834,
+      "tags": {
+        "amenity": "pharmacy",
+        "check_date": "2026-08-05",
+        "healthcare": "pharmacy",
+        "name": "Saravana Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14085251613,
+      "lat": 12.9724204,
+      "lon": 79.1590076,
+      "tags": {
+        "amenity": "atm",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "check_date": "2026-08-10",
+        "name": "Indian Bank"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14092597253,
+      "lat": 12.9699836,
+      "lon": 79.1558333,
+      "tags": {
+        "amenity": "atm",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "check_date": "2026-08-13",
+        "name": "Indian Bank"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14112381498,
+      "lat": 12.9076699,
+      "lon": 79.1321163,
+      "tags": {
+        "addr:floor": "G",
+        "amenity": "restaurant",
+        "check_date": "2026-08-22",
+        "cuisine": "indian;chinese",
+        "diet:vegetarian": "yes",
+        "level": "0",
+        "name": "Darling Akshaya",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 93175156,
+      "center": {
+        "lat": 12.9693226,
+        "lon": 79.1568558
+      },
+      "nodes": [
+        1080144873,
+        1080144885,
+        1080144871,
+        1080144883,
+        1080144855,
+        1080144880,
+        1080144853,
+        1080144851,
+        1080144863,
+        1080144865,
+        1080144876,
+        1080144859,
+        1080144849,
+        1080144877,
+        1080144869,
+        1080144850,
+        1080144867,
+        1080144860,
+        1080144854,
+        1080144857,
+        1080144873
+      ],
+      "tags": {
+        "amenity": "library",
+        "building": "yes",
+        "building:levels": "3",
+        "check_date": "2026-08-02",
+        "name": "EV Periyar Library",
+        "name:etymology:wikidata": "Q737280",
+        "opening_hours": "Mo-Fr 07:30-24:30; Sa-Su,PH 09:00-20:00"
+      }
+    },
+    {
+      "type": "way",
+      "id": 120272987,
+      "center": {
+        "lat": 12.9249395,
+        "lon": 79.1358748
+      },
+      "nodes": [
+        1348980048,
+        12369363916,
+        12369363915,
+        12369363917,
+        12369363918,
+        1348980043,
+        1348980045,
+        1348980046,
+        1348980047,
+        1348980049,
+        1348980048
+      ],
+      "tags": {
+        "addr:city": "Vellore",
+        "addr:postcode": "632004",
+        "addr:street": "Ida Scudder Road",
+        "alt_name": "CMC Vellore;CMCH;CMC, Vellore",
+        "amenity": "hospital",
+        "email": "pro@cmcvellore.ac.in",
+        "healthcare": "hospital",
+        "healthcare:speciality": "intensive;physiatry;radiology;occupational;radiotherapy;nuclear;dental_oral_maxillo_facial_surgery;paediatrics;otolaryngology;endocrinology;infectious_diseases;neonatology;gynaecology;orthopaedics;paediatric_surgery;palliative;rheumatology",
+        "name": "Christian Medical College Hospital",
+        "name:ml": "ക്രിസ്ത്യൻ മെഡിക്കൽ കോളേജ് & ഹോസ്പിറ്റൽ, വെല്ലൂർ",
+        "name:ta": "கிருத்தவ மருத்துவக் கல்லூரி",
+        "phone": "0416-2281000;+91 9498760000",
+        "website": "https://www.cmch-vellore.edu/",
+        "wikidata": "Q3532259",
+        "wikimedia_commons": "Category:Christian Medical College, Vellore",
+        "wikipedia": "en:Christian Medical College Vellore"
+      }
+    },
+    {
+      "type": "way",
+      "id": 198033931,
+      "center": {
+        "lat": 12.9693976,
+        "lon": 79.1584032
+      },
+      "nodes": [
+        14082441228,
+        2082248272,
+        14082441227,
+        14082441225,
+        2082248267,
+        14082441224,
+        14082441223,
+        2082248270,
+        14082441222,
+        2082248269,
+        5317971757,
+        14082441221,
+        5407920499,
+        14082441220,
+        14082441219,
+        14082441218,
+        14082441228
+      ],
+      "tags": {
+        "description": "Park",
+        "landuse": "grass",
+        "leisure": "park",
+        "name": "Greenos",
+        "source": "local knowledge;aerial imagery;streetlevel imagery"
+      }
+    },
+    {
+      "type": "way",
+      "id": 370765052,
+      "center": {
+        "lat": 12.9695037,
+        "lon": 79.1546464
+      },
+      "nodes": [
+        3744530426,
+        3744530425,
+        3744530428,
+        5487048414,
+        5487048413,
+        13947302773,
+        13947302774,
+        13947302775,
+        13947302776,
+        5487048836,
+        3744530426
+      ],
+      "tags": {
+        "amenity": "hospital",
+        "building": "yes",
+        "check_date": "2026-08-13",
+        "healthcare": "hospital",
+        "name": "Health Centre",
+        "operator": "Sri Narayani Hospital and Research Centre (SNHRC)",
+        "operator:type": "private"
+      }
+    },
+    {
+      "type": "way",
+      "id": 462281512,
+      "center": {
+        "lat": 12.8768135,
+        "lon": 79.1346232
+      },
+      "nodes": [
+        4576901888,
+        4576902689,
+        4576902690,
+        4576902691,
+        4639768337,
+        4576901888
+      ],
+      "tags": {
+        "leisure": "park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 556538990,
+      "center": {
+        "lat": 12.9700763,
+        "lon": 79.1588897
+      },
+      "nodes": [
+        14093702492,
+        5368672183,
+        5368672184,
+        5368672185,
+        14093702492
+      ],
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "check_date": "2026-08-05",
+        "name": "DC Bakery"
+      }
+    },
+    {
+      "type": "way",
+      "id": 556538991,
+      "center": {
+        "lat": 12.9700212,
+        "lon": 79.1589814
+      },
+      "nodes": [
+        5368672186,
+        5368672187,
+        5368672188,
+        5368672189,
+        5368672186
+      ],
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Food Court"
+      }
+    },
+    {
+      "type": "way",
+      "id": 556538992,
+      "center": {
+        "lat": 12.9701061,
+        "lon": 79.1590694
+      },
+      "nodes": [
+        5368672190,
+        5368672191,
+        5368672192,
+        5368672193,
+        5368672190
+      ],
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "name": "Food Court"
+      }
+    },
+    {
+      "type": "way",
+      "id": 556538993,
+      "center": {
+        "lat": 12.9701601,
+        "lon": 79.1589587
+      },
+      "nodes": [
+        5368672194,
+        5368672195,
+        5368672196,
+        5368672197,
+        5368672194
+      ],
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Food Court"
+      }
+    },
+    {
+      "type": "way",
+      "id": 557085458,
+      "center": {
+        "lat": 12.9001206,
+        "lon": 79.1328524
+      },
+      "nodes": [
+        5373077731,
+        5373077732,
+        5373077733,
+        5373077731
+      ],
+      "tags": {
+        "leisure": "park",
+        "name": "Park RV Nagar Maruthi Shaka",
+        "surface": "grass"
+      }
+    },
+    {
+      "type": "way",
+      "id": 557408946,
+      "center": {
+        "lat": 12.9176488,
+        "lon": 79.1288575
+      },
+      "nodes": [
+        5375828919,
+        5375828920,
+        5375832621,
+        5373149033,
+        5375836606,
+        5375832623,
+        5375832624,
+        5375832625,
+        5375832626,
+        5375832627,
+        5378537784,
+        5375832628,
+        5375832629,
+        5375832630,
+        5375832631,
+        5375832632,
+        5375832633,
+        5375836605,
+        5375828919
+      ],
+      "tags": {
+        "leisure": "park",
+        "name": "Periyar Park",
+        "name:etymology:wikidata": "Q737280",
+        "source": "local knowledge;aerial imagery;streetlevel imagery"
+      }
+    },
+    {
+      "type": "way",
+      "id": 557415070,
+      "center": {
+        "lat": 12.9201752,
+        "lon": 79.1314797
+      },
+      "nodes": [
+        5375892361,
+        5375892362,
+        5375892363,
+        5375892364,
+        5380998671,
+        5375892365,
+        5380998670,
+        5380998669,
+        5380998672,
+        5375892366,
+        5375892367,
+        5375892368,
+        5375892369,
+        5375892370,
+        5375892371,
+        5375892372,
+        5375892373,
+        5375892374,
+        5375892375,
+        5375892376,
+        5375892377,
+        5375892381,
+        5375892379,
+        5375892380,
+        5375892361
+      ],
+      "tags": {
+        "leisure": "park",
+        "name": "Fort Park",
+        "source": "local knowledge;aerial imagery;streetlevel imagery"
+      }
+    },
+    {
+      "type": "way",
+      "id": 557417590,
+      "center": {
+        "lat": 12.9225306,
+        "lon": 79.1311933
+      },
+      "nodes": [
+        5375909928,
+        5375909950,
+        5375909929,
+        5373125498,
+        5375909931,
+        5375909932,
+        5375909933,
+        5375909934,
+        5375909935,
+        5375909936,
+        5375909937,
+        5375909938,
+        5375909939,
+        5375909940,
+        5378428352,
+        5375909941,
+        5375909942,
+        5378428350,
+        5375909943,
+        5378428348,
+        5378428349,
+        5375909944,
+        5375909945,
+        5378428354,
+        5375909946,
+        5375909947,
+        5375909948,
+        5375909949,
+        5375909928
+      ],
+      "tags": {
+        "leisure": "park",
+        "name": "Children's Park",
+        "note": "Is this a park? No sign of any constructed foothpath to show its a park",
+        "source": "local knowledge;aerial imagery;streetlevel imagery"
+      }
+    },
+    {
+      "type": "way",
+      "id": 570870179,
+      "center": {
+        "lat": 12.9682435,
+        "lon": 79.1569591
+      },
+      "nodes": [
+        5487948698,
+        5487948699,
+        13946184883,
+        13946184884,
+        13946184882,
+        13946184885,
+        13946184890,
+        5487948700,
+        5487948701,
+        5487948696,
+        5487948697,
+        13946184888,
+        13946184887,
+        13946184889,
+        13946184886,
+        5487948698
+      ],
+      "tags": {
+        "addr:city": "Vellore",
+        "addr:landmark": "Indian Flag Post",
+        "addr:postcode": "632014",
+        "addr:street": "Vellore Institue of Technoloy",
+        "description": "Kalpana Chawla Ground in VIT for casual purposes",
+        "landuse": "grass",
+        "leisure": "park",
+        "name": "Kalpana Chawla Ground",
+        "name:etymology:wikidata": "Q237879"
+      }
+    },
+    {
+      "type": "way",
+      "id": 969812366,
+      "center": {
+        "lat": 12.923726,
+        "lon": 79.1327285
+      },
+      "nodes": [
+        9005721726,
+        8974653625,
+        8974653626,
+        8974653627,
+        8974653628,
+        9005721726
+      ],
+      "tags": {
+        "addr:city": "Vellore",
+        "addr:housenumber": "Old Number: 42/1, New Number 53,",
+        "addr:postcode": "632008",
+        "addr:street": "Bangalore Road",
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "brand": "Dojo Play",
+        "building": "yes",
+        "cuisine": "burger;pizza;sandwich",
+        "email": "vellore@dojoplay.in",
+        "internet_access": "yes",
+        "internet_access:fee": "customers",
+        "name": "Dojo Play Vellore",
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "opening_hours:covid19": "Mo-Sa 10:00-18:00",
+        "outdoor_seating": "no",
+        "phone": "+918680053656",
+        "website": "https://dojoplay.in"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1097417456,
+      "center": {
+        "lat": 12.9508313,
+        "lon": 79.1337894
+      },
+      "nodes": [
+        10048469118,
+        10048469119,
+        10048469120,
+        10048469121,
+        10048469122,
+        10048469123,
+        10048469118
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "Government Law College, Vellore"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1097418709,
+      "center": {
+        "lat": 12.9451854,
+        "lon": 79.1350054
+      },
+      "nodes": [
+        10048479143,
+        10048479144,
+        10048479145,
+        10048479146,
+        10048479147,
+        10048479148,
+        10048479143
+      ],
+      "tags": {
+        "amenity": "college"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1182457805,
+      "center": {
+        "lat": 12.934667,
+        "lon": 79.1370931
+      },
+      "nodes": [
+        10980577873,
+        10980577874,
+        10980577875,
+        10980577876,
+        10980577877,
+        10980577878,
+        10980577879,
+        10980577880,
+        10980577881,
+        10980577882,
+        10980577883,
+        10980577884,
+        10980577885,
+        10980577886,
+        10980577887,
+        10980577888,
+        10980577889,
+        10980577890,
+        10980577891,
+        10980577892,
+        10980577893,
+        10980577894,
+        10980577895,
+        10980577896,
+        10980577873
+      ],
+      "tags": {
+        "amenity": "bus_station",
+        "bus": "yes",
+        "name": "Vellore New Bus Stand",
+        "name:en": "Vellore New Bus Stand",
+        "name:ml": "വെല്ലൂർ പുതിയ ബസ് സ്റ്റാൻഡ്",
+        "name:ta": "வேலூர் புதிய பேருந்து நிலையம்",
+        "public_transport": "station"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1259735185,
+      "center": {
+        "lat": 12.971699,
+        "lon": 79.1568161
+      },
+      "nodes": [
+        11711551917,
+        11711551918,
+        11711551919,
+        11711551920,
+        11711551917
+      ],
+      "tags": {
+        "leisure": "park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1337324873,
+      "center": {
+        "lat": 12.9186557,
+        "lon": 79.1327199
+      },
+      "nodes": [
+        12369287832,
+        12369287833,
+        12369287834,
+        12369287835,
+        12369287832
+      ],
+      "tags": {
+        "addr:street": "Anna Salai",
+        "amenity": "marketplace"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1337331166,
+      "center": {
+        "lat": 12.9149017,
+        "lon": 79.1320733
+      },
+      "nodes": [
+        12369335252,
+        12369335253,
+        12369335254,
+        12369335255,
+        12369335252
+      ],
+      "tags": {
+        "amenity": "bank",
+        "brand": "State Bank of India",
+        "brand:wikidata": "Q1340361",
+        "building": "yes",
+        "name": "State Bank of India",
+        "short_name": "SBI"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1410949296,
+      "center": {
+        "lat": 12.8763719,
+        "lon": 79.1353946
+      },
+      "nodes": [
+        12964733888,
+        12964733887,
+        12964733886,
+        12964733885,
+        12964733884,
+        12964733883,
+        12964733882,
+        12964733881,
+        12964733880,
+        12964733879,
+        12964733878,
+        12964733877,
+        12964733876,
+        12964733875,
+        12964733874,
+        12964733873,
+        12964733872,
+        12964733871,
+        12964733870,
+        12964733869,
+        12964733888
+      ],
+      "tags": {
+        "amenity": "college",
+        "landuse": "education",
+        "name": "Christian Medical College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1544509790,
+      "center": {
+        "lat": 12.9853003,
+        "lon": 79.1395833
+      },
+      "nodes": [
+        14048820928,
+        11303765186,
+        11303765189,
+        14058465207,
+        11303765185,
+        14048820933,
+        14048820934,
+        14048820931,
+        14048820930,
+        14048820928
+      ],
+      "tags": {
+        "leisure": "park",
+        "name": "Bernice Puram Park"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1544710223,
+      "center": {
+        "lat": 12.9714754,
+        "lon": 79.1632109
+      },
+      "nodes": [
+        14050330974,
+        14050330971,
+        14050330972,
+        14050330973,
+        14050330974
+      ],
+      "tags": {
+        "amenity": "atm",
+        "brand": "Indian Bank",
+        "brand:wikidata": "Q2003789",
+        "building": "yes",
+        "name": "Indian Bank",
+        "operator": "Indian Bank",
+        "operator:wikidata": "Q2003789"
+      }
+    }
+  ]
+}
