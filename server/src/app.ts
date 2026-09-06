@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { env } from "./env.js";
 import { prisma } from "./db.js";
+import { publicRouter } from "./routes/public.js";
 
 export function createApp() {
   const app = express();
@@ -15,6 +16,8 @@ export function createApp() {
     >`SELECT postgis_version() AS postgis_version, now() AS now`;
     res.json({ ok: true, db: "up", postgis: rows[0]?.postgis_version ?? null });
   });
+
+  app.use("/api", publicRouter);
 
   return app;
 }
