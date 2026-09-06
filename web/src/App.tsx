@@ -4,10 +4,14 @@ import { fetchNearby, type Bucket } from "./api";
 import { MapView } from "./components/MapView";
 import { TimeSlider } from "./components/TimeSlider";
 import { LocationPanel } from "./components/LocationPanel";
+import { AuthPanel } from "./components/AuthPanel";
+import { useAuth } from "./auth";
 
 export default function App() {
   const [bucket, setBucket] = useState<Bucket>("afternoon");
   const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [showAuth, setShowAuth] = useState(false);
+  const { user, signOut } = useAuth();
 
   // One request, on load, carrying all four buckets. Nothing else hits the network
   // while the slider moves.
@@ -27,8 +31,28 @@ export default function App() {
           </p>
         </div>
         <TimeSlider value={bucket} onChange={setBucket} />
-        <div className="ml-auto text-xs text-slate-500">
-          {data ? `${data.count} places` : ""}
+        <div className="ml-auto flex items-center gap-4 text-xs">
+          <span className="text-slate-500">{data ? `${data.count} places` : ""}</span>
+          {user ? (
+            <div className="flex items-center gap-3">
+              <div className="text-right leading-tight">
+                <div className="text-slate-300">{user.displayName}</div>
+                <div className="text-[11px] text-slate-500">
+                  {user.canReview ? "Can post reviews" : "Read-only"}
+                </div>
+              </div>
+              <button onClick={signOut} className="text-slate-500 hover:text-slate-300">
+                Sign out
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() => setShowAuth(true)}
+              className="rounded-md border border-slate-700 px-3 py-1.5 text-slate-300 hover:border-slate-600 hover:text-slate-100"
+            >
+              Sign in
+            </button>
+          )}
         </div>
       </header>
 
@@ -55,9 +79,16 @@ export default function App() {
         </main>
 
         <aside className="w-[380px] shrink-0 border-l border-slate-800 bg-slate-900">
-          <LocationPanel locationId={selectedId} bucket={bucket} />
+          <LocationPanel
+            locationId={selectedId}
+            bucket={bucket}
+            onBucketChange={setBucket}
+            onRequestSignIn={() => setShowAuth(true)}
+          />
         </aside>
       </div>
+
+      {showAuth && <AuthPanel onClose={() => setShowAuth(false)} />}
     </div>
   );
 }

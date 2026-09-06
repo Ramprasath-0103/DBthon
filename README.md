@@ -87,6 +87,41 @@ state is visible, and 3 (Vellore New Bus Stand, Children's Park, Anna Bazaar) ar
 
 All seeded users share the password `password123`.
 
+## API
+
+| Method | Path | Auth |
+|---|---|---|
+| GET | `/api/locations/nearby` | none — all 4 buckets in one response |
+| GET | `/api/locations/:id` | none — per-factor breakdown, review text without authors |
+| GET | `/api/factors` | none |
+| POST | `/api/auth/register` | none |
+| POST | `/api/auth/login` | none |
+| GET | `/api/me` | bearer token |
+| DELETE | `/api/me` | bearer token — anonymises reviews, then deletes the account |
+| POST | `/api/reviews` | bearer token **and** a female account |
+
+## Tests
+
+```bash
+cd server && npm test
+```
+
+17 tests. The ones worth knowing about:
+
+- `write-gate.test.ts` opens a raw `pg` connection, bypasses the API entirely, and asserts
+  Postgres refuses a review from a male account — plus all 8 time-bucket boundaries, and
+  that a JWT carrying a forged `gender: "female"` claim is ignored.
+- `privacy.test.ts` enumerates the public router's own stack and asserts no response
+  mentions gender. Mutation-tested: injecting a leak makes it fail.
+- `erasure.test.ts` asserts deleting an account keeps the review, its 6 ratings, and the
+  sample size intact.
+
+## Docs
+
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — data model, scoring, the two-layer write gate
+- [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) — 4 beats with the exact click path
+- [`docs/JUDGE_QA.md`](docs/JUDGE_QA.md) — scripted answers to the hard questions
+
 ## Notes
 
 - The old Spring Boot attempt at `~/safeway` is untouched. Its container (`safeway-db`,
@@ -96,3 +131,6 @@ All seeded users share the password `password123`.
   go through raw SQL. This is deliberate, not a workaround gone wrong.
 - `location_safety_score` is a **view**, not a table. There is no recompute logic
   anywhere; posting a review moves the score on the next read.
+- Gender is **self-declared at registration**. The enforcement layer is real (middleware
+  plus a Postgres trigger); the identity check is not. See `docs/JUDGE_QA.md`.
+- One review per person per place. A duplicate returns a clean 409, not a database error.

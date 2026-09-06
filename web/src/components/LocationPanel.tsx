@@ -1,8 +1,16 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchLocation, BUCKET_LABELS, BUCKET_HOURS, type Bucket } from "../api";
 import { colorFor, labelFor } from "../lib/score";
+import { useAuth } from "../auth";
+import { ReviewForm } from "./ReviewForm";
 
-type Props = { locationId: number | null; bucket: Bucket };
+type Props = {
+  locationId: number | null;
+  bucket: Bucket;
+  onBucketChange: (b: Bucket) => void;
+  onRequestSignIn: () => void;
+};
 
 function FactorBar({ label, avg }: { label: string; avg: number }) {
   return (
@@ -21,7 +29,9 @@ function FactorBar({ label, avg }: { label: string; avg: number }) {
   );
 }
 
-export function LocationPanel({ locationId, bucket }: Props) {
+export function LocationPanel({ locationId, bucket, onBucketChange, onRequestSignIn }: Props) {
+  const { user } = useAuth();
+  const [writing, setWriting] = useState(false);
   // Keyed by id only. The response carries all four buckets, so moving the slider
   // while a pin is open does not refetch anything.
   const { data, isLoading } = useQuery({
@@ -90,6 +100,43 @@ export function LocationPanel({ locationId, bucket }: Props) {
           </>
         )}
       </div>
+
+      {writing && locationId !== null ? (
+        <ReviewForm
+          locationId={locationId}
+          onCancel={() => setWriting(false)}
+          onDone={(b) => {
+            setWriting(false);
+            // Jump to the bucket the review actually landed in, so the change is visible.
+            onBucketChange(b);
+          }}
+        />
+      ) : (
+        <div className="border-t border-slate-800 p-5">
+          {!user && (
+            <button
+              onClick={onRequestSignIn}
+              className="w-full rounded-md border border-slate-700 py-2 text-sm text-slate-300 hover:border-slate-600 hover:text-slate-100"
+            >
+              Sign in to rate this place
+            </button>
+          )}
+          {user?.canReview && (
+            <button
+              onClick={() => setWriting(true)}
+              className="w-full rounded-md bg-emerald-600 py-2 text-sm font-medium text-white hover:bg-emerald-500"
+            >
+              Rate this place
+            </button>
+          )}
+          {user && !user.canReview && (
+            <div className="rounded-md border border-amber-700/40 bg-amber-900/20 p-3 text-xs leading-relaxed text-amber-200/90">
+              <span className="font-medium">This account is read-only.</span> Anyone can read the
+              map. Only accounts registered as female can post a review.
+            </div>
+          )}
+        </div>
+      )}
 
       {notes.length > 0 && (
         <div className="p-5">

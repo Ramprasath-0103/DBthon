@@ -3,6 +3,8 @@ import cors from "cors";
 import { env } from "./env.js";
 import { prisma } from "./db.js";
 import { publicRouter } from "./routes/public.js";
+import { authRouter } from "./routes/auth.js";
+import { reviewsRouter } from "./routes/reviews.js";
 
 export function createApp() {
   const app = express();
@@ -17,7 +19,11 @@ export function createApp() {
     res.json({ ok: true, db: "up", postgis: rows[0]?.postgis_version ?? null });
   });
 
+  // Three routers, deliberately separate. Nothing on publicRouter may expose gender;
+  // a test walks that router's own stack and asserts it.
   app.use("/api", publicRouter);
+  app.use("/api", authRouter);
+  app.use("/api", reviewsRouter);
 
   return app;
 }
