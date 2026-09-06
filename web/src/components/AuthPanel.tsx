@@ -26,13 +26,13 @@ export function AuthPanel({ onClose }: { onClose: () => void }) {
     }
   }
 
-  const field = "w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none";
+  const field = "w-full rounded-md border border-navy-700 bg-navy-800 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none";
 
   return (
-    <div className="fixed inset-0 z-[2000] flex items-center justify-center bg-slate-950/70 p-4">
+    <div className="fixed inset-0 z-[2000] flex items-center justify-center bg-navy-950/70 p-4">
       <form
         onSubmit={submit}
-        className="w-[380px] rounded-xl border border-slate-700 bg-slate-900 p-6 shadow-2xl"
+        className="w-[380px] rounded-xl border border-navy-700 bg-navy-900 p-6 shadow-2xl"
       >
         <h2 className="text-lg font-semibold">{mode === "in" ? "Sign in" : "Create an account"}</h2>
         <p className="mt-1 text-xs text-slate-400">
@@ -57,7 +57,7 @@ export function AuthPanel({ onClose }: { onClose: () => void }) {
                     className={`flex-1 rounded-md border px-3 py-1.5 text-sm capitalize transition-colors ${
                       gender === g
                         ? "border-emerald-500 bg-emerald-500/15 text-emerald-300"
-                        : "border-slate-700 text-slate-400 hover:border-slate-600"
+                        : "border-navy-700 text-slate-400 hover:border-navy-600"
                     }`}>
                     {g}
                   </button>
@@ -84,7 +84,7 @@ export function AuthPanel({ onClose }: { onClose: () => void }) {
           </button>
         </div>
 
-        <p className="mt-4 border-t border-slate-800 pt-3 text-[11px] leading-relaxed text-slate-500">
+        <p className="mt-4 border-t border-navy-800 pt-3 text-[11px] leading-relaxed text-slate-500">
           Demo accounts — <code className="text-slate-400">demo.female@safeway.test</code> and{" "}
           <code className="text-slate-400">demo.male@safeway.test</code>, password{" "}
           <code className="text-slate-400">demo1234</code>

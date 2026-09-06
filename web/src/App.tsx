@@ -22,14 +22,11 @@ export default function App() {
   });
 
   return (
-    <div className="flex h-screen min-w-[1100px] flex-col bg-slate-900 text-slate-100">
-      <header className="flex shrink-0 items-center gap-8 border-b border-slate-800 px-6 py-3">
-        <div>
-          <h1 className="text-xl font-bold tracking-tight">SafeWay</h1>
-          <p className="text-xs text-slate-500">
-            Women-rated safety by time of day · Vellore
-          </p>
-        </div>
+    <div className="flex h-screen min-w-[1100px] flex-col bg-navy-900 text-slate-100">
+      <header className="flex shrink-0 items-center gap-8 border-b border-navy-800 px-6 py-3">
+        <h1 className="font-brand text-[26px] font-bold leading-none tracking-[-0.01em] text-slate-50">
+          SafeWay
+        </h1>
         <TimeSlider value={bucket} onChange={setBucket} />
         <div className="ml-auto flex items-center gap-4 text-xs">
           <span className="text-slate-500">{data ? `${data.count} places` : ""}</span>
@@ -48,7 +45,7 @@ export default function App() {
           ) : (
             <button
               onClick={() => setShowAuth(true)}
-              className="rounded-md border border-slate-700 px-3 py-1.5 text-slate-300 hover:border-slate-600 hover:text-slate-100"
+              className="rounded-md border border-navy-700 px-3 py-1.5 text-slate-300 hover:border-navy-600 hover:text-slate-100"
             >
               Sign in
             </button>
@@ -78,7 +75,7 @@ export default function App() {
           )}
         </main>
 
-        <aside className="w-[380px] shrink-0 border-l border-slate-800 bg-slate-900">
+        <aside className="w-[380px] shrink-0 border-l border-navy-800 bg-navy-900">
           <LocationPanel
             locationId={selectedId}
             bucket={bucket}

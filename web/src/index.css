@@ -2,10 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Leaflet paints its own light background; match the dark shell so the map does not
+/* Self-hosted: the app must not need the network for its own chrome. Only the map
+   tiles are remote. */
+@font-face {
+  font-family: "Comfortaa";
+  src: url("/fonts/Comfortaa.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("/fonts/Quicksand.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Leaflet paints its own light background; match the navy shell so the map does not
    flash white while tiles load. */
 .leaflet-container {
-  background: #0f172a;
+  background: #0b1c4b;
   font-family: inherit;
 }
 
@@ -14,7 +35,7 @@
   background: #f8fafc;
   border: none;
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.3);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.35);
   padding: 6px 8px;
 }
 .leaflet-tooltip-top::before { border-top-color: #f8fafc; }

@@ -58,7 +58,7 @@ export function ReviewForm({ locationId, onDone, onCancel }: Props) {
   }
 
   return (
-    <form onSubmit={submit} className="border-t border-slate-800 p-5">
+    <form onSubmit={submit} className="border-t border-navy-800 p-5">
       <h3 className="text-sm font-semibold text-slate-200">Rate this place</h3>
       <p className="mt-0.5 text-xs text-slate-500">
         The time you visited decides which part of the day your ratings count towards. You
@@ -72,7 +72,7 @@ export function ReviewForm({ locationId, onDone, onCancel }: Props) {
         value={visitedAt}
         max={nowLocal()}
         onChange={(e) => setVisitedAt(e.target.value)}
-        className="mt-1 w-full rounded-md border border-slate-700 bg-slate-800 px-3 py-1.5 text-sm text-slate-100 focus:border-emerald-500 focus:outline-none"
+        className="mt-1 w-full rounded-md border border-navy-700 bg-navy-800 px-3 py-1.5 text-sm text-slate-100 focus:border-emerald-500 focus:outline-none"
         required
       />
 
@@ -87,7 +87,7 @@ export function ReviewForm({ locationId, onDone, onCancel }: Props) {
               type="range" min={1} max={5} step={1} value={scores[f.code]}
               onChange={(e) => setScores({ ...scores, [f.code]: Number(e.target.value) })}
               aria-label={f.label}
-              className="mt-1 h-1.5 w-full cursor-pointer appearance-none rounded-full bg-slate-700
+              className="mt-1 h-1.5 w-full cursor-pointer appearance-none rounded-full bg-navy-850
                          [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4
                          [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full
                          [&::-webkit-slider-thumb]:bg-emerald-400"
@@ -102,7 +102,7 @@ export function ReviewForm({ locationId, onDone, onCancel }: Props) {
         maxLength={500}
         rows={2}
         placeholder="Anything else? (optional)"
-        className="mt-4 w-full resize-none rounded-md border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none"
+        className="mt-4 w-full resize-none rounded-md border border-navy-700 bg-navy-800 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none"
       />
 
       {error && <p className="mt-2 text-sm text-red-400">{error}</p>}
@@ -113,7 +113,7 @@ export function ReviewForm({ locationId, onDone, onCancel }: Props) {
           {busy ? "Saving…" : "Submit review"}
         </button>
         <button type="button" onClick={onCancel}
-          className="rounded-md border border-slate-700 px-4 py-2 text-sm text-slate-400 hover:text-slate-200">
+          className="rounded-md border border-navy-700 px-4 py-2 text-sm text-slate-400 hover:text-slate-200">
           Cancel
         </button>
       </div>

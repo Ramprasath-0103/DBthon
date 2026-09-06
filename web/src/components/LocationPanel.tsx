@@ -16,7 +16,7 @@ function FactorBar({ label, avg }: { label: string; avg: number }) {
   return (
     <div className="flex items-center gap-3">
       <span className="w-40 shrink-0 text-sm text-slate-300">{label}</span>
-      <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-700">
+      <div className="h-2 flex-1 overflow-hidden rounded-full bg-navy-850">
         <div
           className="h-full rounded-full transition-all duration-300"
           style={{ width: `${(avg / 5) * 100}%`, backgroundColor: colorFor(avg) }}
@@ -57,13 +57,13 @@ export function LocationPanel({ locationId, bucket, onBucketChange, onRequestSig
 
   return (
     <div className="flex h-full flex-col overflow-y-auto">
-      <div className="border-b border-slate-800 p-5">
+      <div className="border-b border-navy-800 p-5">
         <h2 className="text-lg font-semibold leading-tight text-slate-100">{data.name}</h2>
         <p className="mt-0.5 text-sm text-slate-400">{data.category}</p>
         {data.address && <p className="mt-1 text-xs text-slate-500">{data.address}</p>}
       </div>
 
-      <div className="border-b border-slate-800 p-5">
+      <div className="border-b border-navy-800 p-5">
         <div className="mb-3 flex items-baseline justify-between">
           <span className="text-xs font-medium uppercase tracking-wider text-slate-400">
             {BUCKET_LABELS[bucket]}
@@ -72,7 +72,7 @@ export function LocationPanel({ locationId, bucket, onBucketChange, onRequestSig
         </div>
 
         {current.score === null ? (
-          <div className="rounded-md border border-slate-700 bg-slate-800/50 p-4 text-center">
+          <div className="rounded-md border border-navy-700 bg-navy-850/60 p-4 text-center">
             <div className="text-sm font-medium text-slate-400">Not enough data</div>
             <div className="mt-1 text-xs text-slate-500">
               {current.sampleSize} review{current.sampleSize === 1 ? "" : "s"} — at least 3 are
@@ -112,11 +112,11 @@ export function LocationPanel({ locationId, bucket, onBucketChange, onRequestSig
           }}
         />
       ) : (
-        <div className="border-t border-slate-800 p-5">
+        <div className="border-t border-navy-800 p-5">
           {!user && (
             <button
               onClick={onRequestSignIn}
-              className="w-full rounded-md border border-slate-700 py-2 text-sm text-slate-300 hover:border-slate-600 hover:text-slate-100"
+              className="w-full rounded-md border border-navy-700 py-2 text-sm text-slate-300 hover:border-navy-600 hover:text-slate-100"
             >
               Sign in to rate this place
             </button>
@@ -147,7 +147,7 @@ export function LocationPanel({ locationId, bucket, onBucketChange, onRequestSig
             {notes.map((n, i) => (
               <li
                 key={i}
-                className="rounded-md border border-slate-800 bg-slate-800/40 p-3 text-sm text-slate-300"
+                className="rounded-md border border-navy-800 bg-navy-850/50 p-3 text-sm text-slate-300"
               >
                 {n.body}
               </li>

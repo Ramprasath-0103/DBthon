@@ -131,6 +131,14 @@ in parallel let one file's inserts change another's sample counts mid-assertion.
 - [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) — 4 beats with the exact click path
 - [`docs/JUDGE_QA.md`](docs/JUDGE_QA.md) — scripted answers to the hard questions
 
+## Look
+
+Navy shell (`navy` palette in `web/tailwind.config.js`), and the SafeWay wordmark is set in
+**Comfortaa** — a geometric sans with circular bowls and a single-storey `a`, chosen to match
+the reference wordmark. Comfortaa, Poppins and Quicksand are **self-hosted** in
+`web/public/fonts`, so the app never needs the network for its own chrome; only the map tiles
+are remote. Swapping the wordmark font is one line in `tailwind.config.js` (`fontFamily.brand`).
+
 ## Notes
 
 - The old Spring Boot attempt at `~/safeway` is untouched. Its container (`safeway-db`,

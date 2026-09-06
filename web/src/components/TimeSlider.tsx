@@ -26,7 +26,7 @@ export function TimeSlider({ value, onChange }: Props) {
         value={index}
         onChange={(e) => onChange(TIME_BUCKETS[Number(e.target.value)]!)}
         aria-label="Time of day"
-        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-700
+        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-navy-700
                    accent-emerald-400 outline-none
                    [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5
                    [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full
