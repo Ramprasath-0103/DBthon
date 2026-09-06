@@ -1,0 +1,113 @@
+// SafeWay — local-only schema. 6 tables + 1 view (the view lives in migration SQL,
+// Prisma never needs to know about it; we read it with $queryRaw).
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Gender {
+  female
+  male
+  other
+}
+
+enum TimeBucket {
+  morning
+  afternoon
+  evening
+  night
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  displayName  String   @map("display_name")
+  gender       Gender
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  reviews Review[]
+
+  @@map("users")
+}
+
+model LocationCategory {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  locations Location[]
+
+  @@map("location_categories")
+}
+
+model Location {
+  id         Int      @id @default(autoincrement())
+  name       String
+  categoryId Int      @map("category_id")
+  address    String?
+  // PostGIS. Prisma cannot model this type, so it is Unsupported: it is invisible to
+  // Prisma Client reads (good — it can never leak into a DTO) and it makes
+  // prisma.location.create() impossible. ALL location writes go through
+  // src/repo/locations.ts using $executeRaw.
+  geog       Unsupported("geography(Point, 4326)")
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  category LocationCategory @relation(fields: [categoryId], references: [id])
+  reviews  Review[]
+
+  @@index([geog], type: Gist)
+  @@map("locations")
+}
+
+model SafetyFactor {
+  id           Int    @id @default(autoincrement())
+  code         String @unique
+  label        String
+  displayOrder Int    @map("display_order")
+
+  ratings ReviewFactorRating[]
+
+  @@map("safety_factors")
+}
+
+model Review {
+  id         Int        @id @default(autoincrement())
+  // Nullable + SetNull so deleting a user anonymises her reviews instead of
+  // destroying the safety data everyone else relies on.
+  userId     Int?       @map("user_id")
+  locationId Int        @map("location_id")
+  visitedAt  DateTime   @map("visited_at") @db.Timestamptz(6)
+  // Derived from visited_at by a BEFORE INSERT trigger in Asia/Kolkata (Phase 3),
+  // so the API cannot desynchronise it.
+  timeBucket TimeBucket @map("time_bucket")
+  body       String?
+  createdAt  DateTime   @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user     User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  location Location @relation(fields: [locationId], references: [id], onDelete: Cascade)
+  ratings  ReviewFactorRating[]
+
+  // One review per place per person. NULLs do not collide, so anonymised
+  // reviews are unaffected.
+  @@unique([userId, locationId])
+  @@index([locationId, timeBucket])
+  @@map("reviews")
+}
+
+model ReviewFactorRating {
+  reviewId Int @map("review_id")
+  factorId Int @map("factor_id")
+  score    Int @db.SmallInt
+
+  review Review       @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  factor SafetyFactor @relation(fields: [factorId], references: [id])
+
+  @@id([reviewId, factorId])
+  @@map("review_factor_ratings")
+}

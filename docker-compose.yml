@@ -1,0 +1,20 @@
+services:
+  db:
+    image: imresamu/postgis:16-3.4
+    container_name: safeway-dbms-db
+    environment:
+      POSTGRES_USER: safeway
+      POSTGRES_PASSWORD: safeway
+      POSTGRES_DB: safeway
+    ports:
+      - "5434:5432"
+    volumes:
+      - safeway-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U safeway -d safeway"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  safeway-pgdata:
