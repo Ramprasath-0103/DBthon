@@ -131,30 +131,6 @@ in parallel let one file's inserts change another's sample counts mid-assertion.
 - [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) — 4 beats with the exact click path
 - [`docs/JUDGE_QA.md`](docs/JUDGE_QA.md) — scripted answers to the hard questions
 
-## Look
 
-Navy shell (`navy` palette in `web/tailwind.config.js`), and the SafeWay wordmark is set in
-**Comfortaa** — a geometric sans with circular bowls and a single-storey `a`, chosen to match
-the reference wordmark. Comfortaa, Poppins and Quicksand are **self-hosted** in
-`web/public/fonts`, so the app never needs the network for its own chrome; only the map tiles
-are remote. Swapping the wordmark font is one line in `tailwind.config.js` (`fontFamily.brand`).
 
-## Notes
 
-- The old Spring Boot attempt at `~/safeway` is untouched. Its container (`safeway-db`,
-  port 5433) still runs independently of this one (`safeway-dbms-db`, port 5434).
-- `locations.geog` is a PostGIS type Prisma cannot model. It is declared `Unsupported`,
-  which means Prisma Client physically cannot write to `locations` — all location writes
-  go through raw SQL. This is deliberate, not a workaround gone wrong.
-- `location_safety_score` is a **view**, not a table. There is no recompute logic
-  anywhere; posting a review moves the score on the next read.
-- Gender is **self-declared at registration**. The enforcement layer is real (middleware
-  plus a Postgres trigger); the identity check is not. See `docs/JUDGE_QA.md`.
-- **One review per person per place, per time bucket.** The same woman can rate a bus stop
-  separately for morning, afternoon, evening and night — that is the point of the product.
-  A repeat within the same bucket returns a clean 409, not a database error.
-- Place names are shown in English. OSM's `name:en` / `int_name` tags are used when present,
-  then an override table in `src/seed/profiles.ts`; anything still not in Latin script is
-  dropped from the seed rather than shown in a script the audience cannot read.
-- The two `@safeway.test` demo accounts are excluded from seeded reviews, so all four
-  buckets on every place are free during a live demo.
