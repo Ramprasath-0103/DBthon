@@ -16,15 +16,12 @@ Node 22 · Express 5 · **Prisma 6.19.3** · PostgreSQL 16 + PostGIS 3.4 · **Re
 
 ## Ports
 
-Chosen to avoid what is already running on this machine:
-
-| Service  | Port | Why not the default |
-|----------|------|---------------------|
-| Postgres | 5434 | 5432 is your local Postgres, 5433 is the old `~/safeway` container |
-| API      | 8787 | 8080 is in use |
-| Web      | 5174 | 5173 is in use |
-| Redis    | 6380 | 6379 is your standalone `redis` container |
-| LLM proxy | 8317 | Local OpenAI-compatible proxy serving `claude-sonnet-5` (yours, not started here) |
+| Service  | Port | 
+|----------|------|
+| Postgres | 5434 | 
+| API      | 8787 |
+| Web      | 5174 | 
+| Redis    | 6380 |  
 
 ## Run it
 
@@ -52,8 +49,8 @@ cd server && python3 -m venv ai/.venv && ai/.venv/bin/pip install -r ai/requirem
 ```
 
 ```bash
-REVIEW_CHECK_BASE_URL="http://127.0.0.1:8317/v1"
-REVIEW_CHECK_MODEL="claude-sonnet-5"
+REVIEW_CHECK_BASE_URL="****"
+REVIEW_CHECK_MODEL="***"
 REVIEW_CHECK_API_KEY="..."
 ```
 
@@ -81,8 +78,8 @@ Rejected requests are not counted, so a blocked client recovers as the window sl
 (LangChain + `ChatOpenAI`) sends the place and the note — never the author — to the LLM with
 `ai/review_check_prompt.txt`, and the answer must match `ai/verdict.schema.json`:
 `{ "good_to_go": bool, "reason": string }`. `false` → `422` with the reason, nothing saved;
-`true` → the review is added. It rejects only clear junk (gibberish, ads, off-topic, another
-named place); short, informal and Tanglish safety notes pass.
+`true` → the review is added. It rejects only clear junk (gibberish, off-topic, another
+named place); short, informal safety notes pass.
 
 **Nothing new is a hard dependency.** If Redis is down, reads go straight to Postgres and
 nothing is limited; if the LLM is unreachable, the review is added.
