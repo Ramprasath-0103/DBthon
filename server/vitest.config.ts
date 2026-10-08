@@ -8,5 +8,8 @@ export default defineConfig({
     // so sequencing costs nothing.
     fileParallelism: false,
     sequence: { concurrent: false },
+    // Tests use Redis database 1 so a FLUSHDB per file never touches dev data.
+    // Set here, not in .env: dotenv does not override variables that already exist.
+    env: { REDIS_URL: "redis://localhost:6380/1" },
   },
 });

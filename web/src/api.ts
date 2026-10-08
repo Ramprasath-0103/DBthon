@@ -46,9 +46,25 @@ export type LocationDetail = {
   notes: { body: string; timeBucket: Bucket }[];
 };
 
+/** An HTTP error from the API, carrying its status and the server's own message. */
+export class ApiError extends Error {
+  constructor(
+    readonly status: number,
+    message: string,
+  ) {
+    super(message);
+  }
+}
+
+/** 429 means "wait", not "broken": retrying immediately only burns more of the limit. */
+export const isRateLimited = (err: unknown) => err instanceof ApiError && err.status === 429;
+
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(path);
-  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+  if (!res.ok) {
+    const body = await res.json().catch(() => null);
+    throw new ApiError(res.status, body?.message ?? `${res.status} ${res.statusText}`);
+  }
   return res.json() as Promise<T>;
 }
 

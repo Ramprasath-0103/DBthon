@@ -4,6 +4,7 @@ import { Prisma } from "../generated/prisma/index.js";
 import { prisma } from "../db.js";
 import { requireAuth, requireFemale } from "../middleware/auth.js";
 import { FACTOR_COUNT } from "../lib/factors.js";
+import { cacheKeys, invalidate } from "../cache.js";
 
 export const reviewsRouter = Router();
 
@@ -53,6 +54,10 @@ reviewsRouter.post("/reviews", requireAuth, requireFemale, async (req, res) => {
       await tx.$executeRaw`INSERT INTO review_factor_ratings (review_id, factor_id, score) VALUES ${Prisma.join(values)}`;
       return created;
     });
+
+    // After commit, before anyone can read: the map and this place's detail now
+    // reflect the new review on the very next request.
+    await invalidate(cacheKeys.nearbyDefault, cacheKeys.location(locationId));
 
     // Return the freshly recomputed score so the map can update without a refetch.
     const scores = await prisma.$queryRaw<{ score: number | null; sampleSize: number }[]>`

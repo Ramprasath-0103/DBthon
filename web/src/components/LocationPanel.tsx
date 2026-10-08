@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchLocation, BUCKET_LABELS, BUCKET_HOURS, type Bucket } from "../api";
+import { fetchLocation, isRateLimited, BUCKET_LABELS, BUCKET_HOURS, type Bucket } from "../api";
 import { colorFor, labelFor } from "../lib/score";
 import { useAuth } from "../auth";
 import { ReviewForm } from "./ReviewForm";
@@ -34,7 +34,7 @@ export function LocationPanel({ locationId, bucket, onBucketChange, onRequestSig
   const [writing, setWriting] = useState(false);
   // Keyed by id only. The response carries all four buckets, so moving the slider
   // while a pin is open does not refetch anything.
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, error } = useQuery({
     queryKey: ["location", locationId],
     queryFn: () => fetchLocation(locationId!),
     enabled: locationId !== null,
@@ -45,6 +45,13 @@ export function LocationPanel({ locationId, bucket, onBucketChange, onRequestSig
     return (
       <div className="flex h-full items-center justify-center p-8 text-center text-sm text-slate-500">
         Select a place on the map to see how it scores on each safety factor.
+      </div>
+    );
+  }
+  if (error) {
+    return (
+      <div className="p-6 text-sm text-red-400">
+        {isRateLimited(error) ? error.message : "Could not load this place."}
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchNearby, type Bucket } from "./api";
+import { fetchNearby, isRateLimited, type Bucket } from "./api";
 import { MapView } from "./components/MapView";
 import { TimeSlider } from "./components/TimeSlider";
 import { LocationPanel } from "./components/LocationPanel";
@@ -62,7 +62,9 @@ export default function App() {
           )}
           {error && (
             <div className="flex h-full items-center justify-center text-red-400">
-              Could not reach the API. Is the server running on port 8787?
+              {isRateLimited(error)
+                ? error.message
+                : "Could not reach the API. Is the server running on port 8787?"}
             </div>
           )}
           {data && (

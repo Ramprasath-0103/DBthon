@@ -7,6 +7,7 @@ const schema = z.object({
   PORT: z.coerce.number().int().positive().default(8787),
   JWT_SECRET: z.string().min(8),
   WEB_ORIGIN: z.string().url().default("http://localhost:5174"),
+  REDIS_URL: z.string().url().default("redis://localhost:6380"),
 });
 
 const parsed = schema.safeParse(process.env);

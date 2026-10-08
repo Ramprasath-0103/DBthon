@@ -8,6 +8,8 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import bcrypt from "bcryptjs";
 import { prisma } from "../src/db.js";
+import { createClient } from "redis";
+import { env } from "../src/env.js";
 import { insertLocations, type NewLocation } from "../src/repo/locations.js";
 import { mulberry32, gaussian, intBetween, shuffled, clamp } from "../src/lib/random.js";
 import { TIME_BUCKETS, BUCKET_HOURS, istInstant, type Bucket } from "../src/lib/time.js";
@@ -265,6 +267,30 @@ async function main() {
   console.log(`Sparse (<3 reviews): ${[...sparse].map((i) => inserted[i]!.name).join(", ")}`);
   console.log(`Contested (high reviewer disagreement): ${[...contested].map((i) => inserted[i]!.name).join(", ")}`);
   await prisma.$disconnect();
+  await flushCache();
+}
+
+/**
+ * Seeding rewrites every row behind the API's back, so cached responses would be
+ * stale for up to a TTL. Drop them. Redis being down is fine: there is nothing to drop.
+ */
+async function flushCache() {
+  // Its own client with no reconnects: the shared one retries forever, which would
+  // keep this script from ever exiting while Redis is down.
+  const redis = createClient({ url: env.REDIS_URL, socket: { reconnectStrategy: false } });
+  redis.on("error", () => {});
+  try {
+    await redis.connect();
+  } catch {
+    console.log("Cache: Redis not reachable, nothing to flush");
+    return;
+  }
+  let dropped = 0;
+  for await (const keys of redis.scanIterator({ MATCH: "sw:*", COUNT: 100 })) {
+    if (keys.length > 0) dropped += await redis.del(keys);
+  }
+  await redis.close();
+  console.log(`Cache: ${dropped} key(s) flushed`);
 }
 
 await main();

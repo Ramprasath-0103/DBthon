@@ -21,6 +21,7 @@ Chosen to avoid what is already running on this machine:
 | Service  | Port | Why not the default |
 |----------|------|---------------------|
 | Postgres | 5434 | 5432 is your local Postgres, 5433 is the old `~/safeway` container |
+| Redis    | 6380 | 6379 is your standalone `redis` container |
 | API      | 8787 | 8080 is in use |
 | Web      | 5174 | 5173 is in use |
 
@@ -146,6 +147,13 @@ are remote. Swapping the wordmark font is one line in `tailwind.config.js` (`fon
 - `locations.geog` is a PostGIS type Prisma cannot model. It is declared `Unsupported`,
   which means Prisma Client physically cannot write to `locations` — all location writes
   go through raw SQL. This is deliberate, not a workaround gone wrong.
+- Redis (`safeway-dbms-redis`) is an optimisation, never a dependency. It caches the
+  three public reads (factors 24 h; the default map view and each place's detail 10 min,
+  dropped immediately whenever a review is posted) and enforces a sliding-window limit of
+  100 requests per minute per IP on `/api`. If it is down, reads go to Postgres and
+  nothing is limited. Responses carry `X-Cache: HIT|MISS` and `RateLimit-*` headers.
+  Behind a reverse proxy, use `createApp({ trustProxy: true })` or every client shares
+  the proxy's IP — and one limit. Tests use Redis database 1 and flush it per file.
 - `location_safety_score` is a **view**, not a table. There is no recompute logic
   anywhere; posting a review moves the score on the next read.
 - Gender is **self-declared at registration**. The enforcement layer is real (middleware

@@ -16,5 +16,20 @@ services:
       timeout: 3s
       retries: 30
 
+  # Cache + rate-limit store. Everything in it is disposable, so persistence is off.
+  # Every key carries a TTL, so volatile-lru can evict any of them; 32mb is a ceiling,
+  # real use is well under 1mb. Port 6380 because 6379 is already taken on this machine.
+  redis:
+    image: redis:7-alpine
+    container_name: safeway-dbms-redis
+    command: redis-server --maxmemory 32mb --maxmemory-policy volatile-lru --save "" --appendonly no
+    ports:
+      - "6380:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
 volumes:
   safeway-pgdata:
