@@ -2,6 +2,10 @@
 
 stdin:  {"place": {"name", "category", "address"}, "note": "..."}
 stdout: one JSON object shaped by verdict.schema.json
+
+Run with the venv's Python, not the system one (that has no LangChain):
+  echo '{"place": {"name": "Bus stand", "category": "transit", "address": "Vellore"}, "note": "dark at night"}' \
+    | server/ai/.venv/bin/python server/ai/check_review.py
 """
 import json
 import os
