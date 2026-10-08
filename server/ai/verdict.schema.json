@@ -1,0 +1,17 @@
+{
+  "title": "ReviewVerdict",
+  "description": "Whether a review note is about the place it was posted on.",
+  "type": "object",
+  "properties": {
+    "good_to_go": {
+      "type": "boolean",
+      "description": "true if the note is plausibly about this place; false only for clear junk."
+    },
+    "reason": {
+      "type": "string",
+      "description": "One short sentence addressed to the reviewer."
+    }
+  },
+  "required": ["good_to_go", "reason"],
+  "additionalProperties": false
+}

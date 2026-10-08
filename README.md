@@ -41,6 +41,13 @@ cd server && npm install && npm run db:deploy && npm run db:seed && npm run dev
 cd web && npm install && npm run dev
 ```
 
+Optional — the review note check (Python + LangChain, in `server/ai/`). Set
+`REVIEW_CHECK_API_KEY` in `server/.env`; without it the check is off and every note is accepted.
+
+```bash
+cd server && python3 -m venv ai/.venv && ai/.venv/bin/pip install -r ai/requirements.txt
+```
+
 Then open <http://localhost:5174>.
 
 ## Useful
@@ -154,6 +161,10 @@ are remote. Swapping the wordmark font is one line in `tailwind.config.js` (`fon
   nothing is limited. Responses carry `X-Cache: HIT|MISS` and `RateLimit-*` headers.
   Behind a reverse proxy, use `createApp({ trustProxy: true })` or every client shares
   the proxy's IP — and one limit. Tests use Redis database 1 and flush it per file.
+- Review notes are judged by `server/ai/check_review.py` before anything is saved. It sends
+  the place and the note (never the author) with `ai/review_check_prompt.txt`, and the model
+  must answer in the shape of `ai/verdict.schema.json`. `good_to_go: false` → 422 and nothing
+  is saved; true → the review is added. If the check cannot run, the review is added.
 - `location_safety_score` is a **view**, not a table. There is no recompute logic
   anywhere; posting a review moves the score on the next read.
 - Gender is **self-declared at registration**. The enforcement layer is real (middleware

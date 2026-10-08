@@ -4,13 +4,16 @@ import { env } from "./env.js";
 import { prisma } from "./db.js";
 import { publicRouter } from "./routes/public.js";
 import { authRouter } from "./routes/auth.js";
-import { reviewsRouter } from "./routes/reviews.js";
+import { createReviewsRouter } from "./routes/reviews.js";
+import { checkWithPython, type ReviewChecker } from "./lib/reviewCheck.js";
 import { rateLimit, DEFAULT_RATE_LIMIT, type RateLimitOptions } from "./middleware/rateLimit.js";
 
 export type AppOptions = {
   rateLimit?: RateLimitOptions;
   /** Set when running behind a reverse proxy, so req.ip is the client, not the proxy. */
   trustProxy?: boolean;
+  /** Judges review notes. Defaults to the LangChain script in ai/. */
+  reviewChecker?: ReviewChecker;
 };
 
 export function createApp(options: AppOptions = {}) {
@@ -34,7 +37,7 @@ export function createApp(options: AppOptions = {}) {
   // a test walks that router's own stack and asserts it.
   app.use("/api", publicRouter);
   app.use("/api", authRouter);
-  app.use("/api", reviewsRouter);
+  app.use("/api", createReviewsRouter(options.reviewChecker ?? checkWithPython));
 
   return app;
 }

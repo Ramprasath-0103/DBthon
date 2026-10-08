@@ -4,3 +4,5 @@ dist/
 *.tsbuildinfo
 .DS_Store
 server/src/generated/
+.venv/
+__pycache__/

@@ -5,8 +5,7 @@ import { prisma } from "../db.js";
 import { requireAuth, requireFemale } from "../middleware/auth.js";
 import { FACTOR_COUNT } from "../lib/factors.js";
 import { cacheKeys, invalidate } from "../cache.js";
-
-export const reviewsRouter = Router();
+import type { ReviewChecker } from "../lib/reviewCheck.js";
 
 const NewReview = z.object({
   locationId: z.number().int().positive(),
@@ -15,67 +14,99 @@ const NewReview = z.object({
   ratings: z.record(z.string(), z.number().int().min(1).max(5)),
 });
 
-reviewsRouter.post("/reviews", requireAuth, requireFemale, async (req, res) => {
-  const parsed = NewReview.safeParse(req.body);
-  if (!parsed.success) {
-    res.status(400).json({ error: "invalid_input", details: parsed.error.flatten().fieldErrors });
-    return;
-  }
-  const { locationId, visitedAt, body, ratings } = parsed.data;
+/** The checker is injected so tests can substitute a fake and never call the LLM. */
+export function createReviewsRouter(checkReview: ReviewChecker) {
+  const reviewsRouter = Router();
 
-  if (visitedAt.getTime() > Date.now()) {
-    res.status(400).json({ error: "future_visit", message: "You cannot rate a visit that has not happened." });
-    return;
-  }
+  reviewsRouter.post("/reviews", requireAuth, requireFemale, async (req, res) => {
+    const parsed = NewReview.safeParse(req.body);
+    if (!parsed.success) {
+      res.status(400).json({ error: "invalid_input", details: parsed.error.flatten().fieldErrors });
+      return;
+    }
+    const { locationId, visitedAt, body, ratings } = parsed.data;
 
-  const factors = await prisma.safetyFactor.findMany({ select: { id: true, code: true } });
-  const missing = factors.filter((f) => ratings[f.code] === undefined).map((f) => f.code);
-  if (missing.length > 0 || Object.keys(ratings).length !== FACTOR_COUNT) {
-    res.status(400).json({ error: "incomplete_ratings", missing });
-    return;
-  }
+    if (visitedAt.getTime() > Date.now()) {
+      res.status(400).json({ error: "future_visit", message: "You cannot rate a visit that has not happened." });
+      return;
+    }
 
-  try {
-    const review = await prisma.$transaction(async (tx) => {
-      // time_bucket is overwritten by the BEFORE INSERT trigger; the value sent here
-      // is a placeholder the database will replace.
-      const created = await tx.review.create({
-        data: {
-          userId: req.user!.id,
-          locationId,
-          visitedAt,
-          timeBucket: "morning",
-          body: body && body.length > 0 ? body : null,
-        },
-        select: { id: true, timeBucket: true },
+    const factors = await prisma.safetyFactor.findMany({ select: { id: true, code: true } });
+    const missing = factors.filter((f) => ratings[f.code] === undefined).map((f) => f.code);
+    if (missing.length > 0 || Object.keys(ratings).length !== FACTOR_COUNT) {
+      res.status(400).json({ error: "incomplete_ratings", missing });
+      return;
+    }
+
+    // Only a note is sent to the LLM. Not good to go → nothing is saved and she can
+    // edit and resubmit; good to go, or no verdict at all → the review is added.
+    const note = body && body.length > 0 ? body : null;
+    if (note) {
+      const place = await prisma.location.findUnique({
+        where: { id: locationId },
+        select: { name: true, address: true, category: { select: { name: true } } },
       });
-      // One statement for all six ratings.
-      const values = factors.map((f) => Prisma.sql`(${created.id}, ${f.id}, ${ratings[f.code]!})`);
-      await tx.$executeRaw`INSERT INTO review_factor_ratings (review_id, factor_id, score) VALUES ${Prisma.join(values)}`;
-      return created;
-    });
+      if (!place) {
+        res.status(404).json(errorBody({ code: "23503" }));
+        return;
+      }
+      const verdict = await checkReview(
+        { name: place.name, category: place.category.name, address: place.address ?? "unknown" },
+        note,
+      );
+      if (verdict?.good_to_go === false) {
+        res.status(422).json({
+          error: "note_not_relevant",
+          message: `${verdict.reason} Edit your note or leave it out to post your ratings.`,
+        });
+        return;
+      }
+    }
 
-    // After commit, before anyone can read: the map and this place's detail now
-    // reflect the new review on the very next request.
-    await invalidate(cacheKeys.nearbyDefault, cacheKeys.location(locationId));
+    try {
+      const review = await prisma.$transaction(async (tx) => {
+        // time_bucket is overwritten by the BEFORE INSERT trigger; the value sent here
+        // is a placeholder the database will replace.
+        const created = await tx.review.create({
+          data: {
+            userId: req.user!.id,
+            locationId,
+            visitedAt,
+            timeBucket: "morning",
+            body: note,
+          },
+          select: { id: true, timeBucket: true },
+        });
+        // One statement for all six ratings.
+        const values = factors.map((f) => Prisma.sql`(${created.id}, ${f.id}, ${ratings[f.code]!})`);
+        await tx.$executeRaw`INSERT INTO review_factor_ratings (review_id, factor_id, score) VALUES ${Prisma.join(values)}`;
+        return created;
+      });
 
-    // Return the freshly recomputed score so the map can update without a refetch.
-    const scores = await prisma.$queryRaw<{ score: number | null; sampleSize: number }[]>`
-      SELECT score::float8 AS "score", sample_size::int AS "sampleSize"
-      FROM location_safety_score
-      WHERE location_id = ${locationId} AND time_bucket = ${review.timeBucket}::"TimeBucket"`;
+      // After commit, before anyone can read: the map and this place's detail now
+      // reflect the new review on the very next request.
+      await invalidate(cacheKeys.nearbyDefault, cacheKeys.location(locationId));
 
-    res.status(201).json({
-      id: review.id,
-      locationId,
-      timeBucket: review.timeBucket,
-      score: scores[0]?.score ?? null,
-      sampleSize: scores[0]?.sampleSize ?? 0,
-    });
-  } catch (err) {
-    res.status(mapError(err)).json(errorBody(err));
-  }
-});
+      // Return the freshly recomputed score so the map can update without a refetch.
+      const scores = await prisma.$queryRaw<{ score: number | null; sampleSize: number }[]>`
+        SELECT score::float8 AS "score", sample_size::int AS "sampleSize"
+        FROM location_safety_score
+        WHERE location_id = ${locationId} AND time_bucket = ${review.timeBucket}::"TimeBucket"`;
+
+      res.status(201).json({
+        id: review.id,
+        locationId,
+        timeBucket: review.timeBucket,
+        score: scores[0]?.score ?? null,
+        sampleSize: scores[0]?.sampleSize ?? 0,
+      });
+    } catch (err) {
+      res.status(mapError(err)).json(errorBody(err));
+    }
+  });
+
+  return reviewsRouter;
+}
 
 /** Postgres error codes raised by the schema and the write-gate trigger. */
 function pgCode(err: unknown): string | undefined {

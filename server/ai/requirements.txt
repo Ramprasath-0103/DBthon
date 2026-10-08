@@ -1,0 +1,2 @@
+langchain-openai==1.6.7
+python-dotenv
